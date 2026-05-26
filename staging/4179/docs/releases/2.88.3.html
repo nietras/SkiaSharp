@@ -1,0 +1,209 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Version 2.88.3 | SkiaSharp </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Version 2.88.3 | SkiaSharp ">
+      
+      
+      <link rel="icon" href="../images/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../TOC.html">
+      <meta name="docfx:tocrel" content="TOC.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/mono/SkiaSharp/blob/4179/merge/documentation/docfx/releases/2.88.3.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="version-2883">Version 2.88.3</h1>
+<!--
+  RAW PR DATA — Do not remove this comment block.
+  AI uses this data to generate the polished release notes below.
+  Re-run the script to refresh this data from git history.
+
+  Generated: 2026-06-16T19:38:37Z by generate-release-notes.py
+  version:   2.88.3
+  status:    stable
+  branch:    release/2.88.3
+  diff:      release/2.88.2..release/2.88.3
+  prs:       10
+
+  - fix(wasm): Adjust for invalid globbing for 3.1.12 archive lookup by @jeromelaban in https://github.com/mono/SkiaSharp/pull/2269 [community ✨] (1 commit, 1 day)
+  - Intercept and capture GL for .NET by @mattleibow in https://github.com/mono/SkiaSharp/pull/2268 (3 commits, 2 days)
+  - Add .NET 7 Support for Blazor views by @mattleibow in https://github.com/mono/SkiaSharp/pull/2254 (8 commits, 4 days)
+  - Update to ubuntu-20.04 by @mattleibow in https://github.com/mono/SkiaSharp/pull/2256 (14 commits, 4 days)
+  - Add build infrastructure for .NET 7 by @mattleibow in https://github.com/mono/SkiaSharp/pull/2255 (14 commits, 4 days)
+  - feat: Generate for Emscripten 3.1.12 and SIMD features by @jeromelaban in https://github.com/mono/SkiaSharp/pull/2259 [community ✨] (3 commits, 3 days)
+  - A skip is basically a read to a null buffer by @mattleibow in https://github.com/mono/SkiaSharp/pull/2265 (1 commit, 1 day)
+  - Use new .NET things by @mattleibow in https://github.com/mono/SkiaSharp/pull/2264 (3 commits, 2 days)
+  - Fix the use of vcpkg by @mattleibow in https://github.com/mono/SkiaSharp/pull/2257 (6 commits, 2 days)
+  - Add RTLD_DEEPBIND flag to dlopen mode by @snnz in https://github.com/mono/SkiaSharp/pull/2247 [community ✨] (1 commit, 1 day)
+-->
+<!-- Generated: 2026-06-16T18:39:14Z by claude-opus-4.8 -->
+
+<blockquote>
+<p><strong>.NET 7 and WebAssembly improvements</strong> · Released · <a href="https://www.nuget.org/packages/SkiaSharp/2.88.3">NuGet</a> · <a href="https://github.com/mono/SkiaSharp/releases/tag/v2.88.3">GitHub Release</a></p>
+</blockquote>
+<h2 id="highlights">Highlights</h2>
+<p>This release adds .NET 7 support for Blazor views and the build infrastructure behind it, upgrades the WebAssembly build to Emscripten 3.1.12 with SIMD features, and improves GL interop for .NET. Community contributors <a href="https://github.com/jeromelaban">@jeromelaban</a> and <a href="https://github.com/snnz">@snnz</a> drove the WebAssembly and Linux loader improvements.</p>
+<h2 id="new-features">New Features</h2>
+<h3 id="gpu--rendering">GPU &amp; Rendering</h3>
+<ul>
+<li><strong>GL interception for .NET</strong> — Intercepts and captures GL for .NET. (<a href="https://github.com/mono/SkiaSharp/pull/2268">#2268</a>)</li>
+</ul>
+<h3 id="platform">Platform</h3>
+<ul>
+<li><strong>.NET 7 Blazor views</strong> — Adds .NET 7 support for Blazor views, along with the supporting build infrastructure. (<a href="https://github.com/mono/SkiaSharp/pull/2254">#2254</a>, <a href="https://github.com/mono/SkiaSharp/pull/2255">#2255</a>)</li>
+<li><strong>Emscripten 3.1.12 with SIMD</strong> — Generates for Emscripten 3.1.12 and enables SIMD features for WebAssembly. ❤️ <a href="https://github.com/jeromelaban">@jeromelaban</a> (<a href="https://github.com/mono/SkiaSharp/pull/2259">#2259</a>)</li>
+<li><strong><code>RTLD_DEEPBIND</code> dlopen flag</strong> — Adds the <code>RTLD_DEEPBIND</code> flag to the <code>dlopen</code> mode on Linux. ❤️ <a href="https://github.com/snnz">@snnz</a> (<a href="https://github.com/mono/SkiaSharp/pull/2247">#2247</a>)</li>
+</ul>
+<h2 id="bug-fixes">Bug Fixes</h2>
+<ul>
+<li><strong>WASM archive lookup</strong> — Fixes invalid globbing for the 3.1.12 archive lookup. ❤️ <a href="https://github.com/jeromelaban">@jeromelaban</a> (<a href="https://github.com/mono/SkiaSharp/pull/2269">#2269</a>)</li>
+<li><strong>Null-buffer skip</strong> — Treats a skip as a read into a null buffer. (<a href="https://github.com/mono/SkiaSharp/pull/2265">#2265</a>)</li>
+</ul>
+<h2 id="platform-support">Platform Support</h2>
+<table>
+<thead>
+<tr>
+<th>Platform</th>
+<th>What's New</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>🌐 WebAssembly</td>
+<td>Emscripten 3.1.12 with SIMD, archive lookup fix</td>
+</tr>
+<tr>
+<td>📦 General</td>
+<td>.NET 7 Blazor views and build infrastructure, GL interception</td>
+</tr>
+<tr>
+<td>🐧 Linux</td>
+<td><code>RTLD_DEEPBIND</code> dlopen flag</td>
+</tr>
+</tbody>
+</table>
+<h2 id="community-contributors-">Community Contributors ❤️</h2>
+<table>
+<thead>
+<tr>
+<th>Contributor</th>
+<th>What They Did</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/jeromelaban">@jeromelaban</a></td>
+<td>Upgraded WebAssembly to Emscripten 3.1.12 with SIMD and fixed archive lookup</td>
+</tr>
+<tr>
+<td><a href="https://github.com/snnz">@snnz</a></td>
+<td>Added the <code>RTLD_DEEPBIND</code> dlopen flag on Linux</td>
+</tr>
+</tbody>
+</table>
+<h2 id="links">Links</h2>
+<ul>
+<li><a href="https://github.com/mono/SkiaSharp/compare/v2.88.2...v2.88.3">Full Changelog</a></li>
+<li><a href="https://www.nuget.org/packages/SkiaSharp/2.88.3">NuGet Package</a></li>
+<li><a href="https://github.com/mono/SkiaSharp/tree/main/changelogs/SkiaSharp/2.88.3">API Diff</a></li>
+</ul>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/mono/SkiaSharp/blob/4179/merge/documentation/docfx/releases/2.88.3.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          PR #4179 · mattleibow/api-diff-stable-rollup · 577b69d
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,258 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Version 2.80.2 | SkiaSharp </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Version 2.80.2 | SkiaSharp ">
+      
+      
+      <link rel="icon" href="../images/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../TOC.html">
+      <meta name="docfx:tocrel" content="TOC.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/mono/SkiaSharp/blob/main/documentation/docfx/releases/2.80.2.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="version-2802">Version 2.80.2</h1>
+<!--
+  RAW PR DATA — Do not remove this comment block.
+  AI uses this data to generate the polished release notes below.
+  Re-run the script to refresh this data from git history.
+
+  Generated: 2026-06-16T19:35:58Z by generate-release-notes.py
+  version:   2.80.2
+  status:    stable
+  branch:    release/2.80.2
+  diff:      release/2.80.1..release/2.80.2
+  prs:       33
+
+  - Update Docs for v2.80.2 by @mattleibow in https://github.com/mono/SkiaSharp/pull/1493 (10 commits, 4 days)
+  - Update Chromium Web Driver by @mattleibow in https://github.com/mono/SkiaSharp/pull/1488 (2 commits, 1 day)
+  - Check the correct directory for native libraries with ASP.NET by @mattleibow in https://github.com/mono/SkiaSharp/pull/1483 (8 commits, 3 days)
+  - [macOS] Use NeedsDisplay instead of Display by @mattleibow in https://github.com/mono/SkiaSharp/pull/1475 (2 commits, 1 day)
+  - Add a few more GPU debugging members by @mattleibow in https://github.com/mono/SkiaSharp/pull/1478 (3 commits, 2 days)
+  - Use the version of OpenTK that is correctly sn by @mattleibow in https://github.com/mono/SkiaSharp/pull/1480 (1 commit, 1 day)
+  - Update the HarfBuzz package version by @mattleibow in https://github.com/mono/SkiaSharp/pull/1476 (1 commit, 1 day)
+  - Expose SKGraphics for Debugging by @mattleibow in https://github.com/mono/SkiaSharp/pull/1473 (5 commits, 2 days)
+  - [UWP] Don't block the UI thread when invalidating by @mattleibow in https://github.com/mono/SkiaSharp/pull/1468 (8 commits, 4 days)
+  - Add an extensions for SKColorF by @mattleibow in https://github.com/mono/SkiaSharp/pull/1469 (3 commits, 1 day)
+  - Make sure to overwrite the underlying pixel by @mattleibow in https://github.com/mono/SkiaSharp/pull/1457 (2 commits, 1 day)
+  - Revert the code for SetScaleTranslate by @mattleibow in https://github.com/mono/SkiaSharp/pull/1452 (2 commits, 2 days)
+  - Sometimes we can't return float, for some reason by @mattleibow in https://github.com/mono/SkiaSharp/pull/1453 (4 commits, 1 day)
+  - Create a NuGet containing just the native/nugets by @mattleibow in https://github.com/mono/SkiaSharp/pull/1456 (4 commits, 1 day)
+  - Use the correct native code for WASM + GL by @mattleibow in https://github.com/mono/SkiaSharp/pull/1445 (1 commit, 1 day)
+  - Use buildTransitive as well as build by @mattleibow in https://github.com/mono/SkiaSharp/pull/1440 (6 commits, 2 days)
+  - Fix the shaky unit test by @mattleibow in https://github.com/mono/SkiaSharp/pull/1441 (2 commits, 1 day)
+  - Use linear metrics for backwards compat by @mattleibow in https://github.com/mono/SkiaSharp/pull/1439 (1 commit, 1 day)
+  - Handle invalid text correctly by @mattleibow in https://github.com/mono/SkiaSharp/pull/1438 (1 commit, 1 day)
+  - Update skia to fix #465 by @mattleibow in https://github.com/mono/SkiaSharp/pull/1436 (1 commit, 1 day)
+  - Add a replacement method by @mattleibow in https://github.com/mono/SkiaSharp/pull/1431 (2 commits, 2 days)
+  - Add the GPU views for Uno Platform by @mattleibow in https://github.com/mono/SkiaSharp/pull/1429 (10 commits, 4 days)
+  - Update the Uno package versions by @mattleibow in https://github.com/mono/SkiaSharp/pull/1426 (6 commits, 2 days)
+  - Update GitHub Templates by @mattleibow in https://github.com/mono/SkiaSharp/pull/1427 (4 commits, 1 day)
+  - Some performance improvements for Forms by @mattleibow in https://github.com/mono/SkiaSharp/pull/1424 (3 commits, 1 day)
+  - Add WASM Support for Uno Platform by @mattleibow in https://github.com/mono/SkiaSharp/pull/1333 (218 commits, 51 days)
+  - Add more Uno things by @mattleibow in https://github.com/mono/SkiaSharp/pull/1420 (6 commits, 2 days)
+  - Passing `--configuration=debug` to the bootstrapper now generates a debug library by @mattleibow in https://github.com/mono/SkiaSharp/pull/1418 (3 commits, 2 days)
+  - Update Docker samples to .NET Core 3.1 by @mattleibow in https://github.com/mono/SkiaSharp/pull/1417 (3 commits, 1 day)
+  - Alpine appears to not be ignoring the request to build without fontconfig by @mattleibow in https://github.com/mono/SkiaSharp/pull/1416 (12 commits, 1 day)
+  - SKCanvas.DrawTextOnPath v2.80.1 iOS NullReferenceException (#1408) by @ziriax in https://github.com/mono/SkiaSharp/pull/1410 [community ✨] (1 commit, 1 day)
+  - Fix issue when creating SKData from a non-seekable stream by @mattleibow in https://github.com/mono/SkiaSharp/pull/1411 (2 commits, 1 day)
+  - Fixed origin parameter is ignored in SKSurface.Create by @ziriax in https://github.com/mono/SkiaSharp/pull/1404 [community ✨] (1 commit, 1 day)
+-->
+<!-- Generated: 2026-06-16T18:45:00Z by claude-opus-4.8 -->
+
+<blockquote>
+<p><strong>Bug-fix release with memory debugging and Uno GPU views</strong> · Released September 12, 2020 · <a href="https://www.nuget.org/packages/SkiaSharp/2.80.2">NuGet</a> · <a href="https://github.com/mono/SkiaSharp/releases/tag/v2.80.2">GitHub Release</a></p>
+</blockquote>
+<h2 id="highlights">Highlights</h2>
+<p>A stability-focused release fixing numerous bugs across image encoding, text rendering, interop, and native library loading. New memory debugging APIs help diagnose GPU resource usage, and the Uno Platform views gain GPU support plus WASM CPU rendering. Community contributor <a href="https://github.com/ziriax">@ziriax</a> drove two of the iOS and surface fixes.</p>
+<h2 id="new-features">New Features</h2>
+<h3 id="engine">Engine</h3>
+<ul>
+<li><strong>Skia update</strong> — Bumped the native Skia engine to pick up upstream fixes (<a href="https://github.com/mono/SkiaSharp/pull/1436">#1436</a>).</li>
+</ul>
+<h3 id="api-surface">API Surface</h3>
+<ul>
+<li><strong>Memory debugging APIs</strong> — Exposed <code>SKGraphics</code> for diagnostics, plus additional GPU memory debugging members on <code>GRContext</code> (<a href="https://github.com/mono/SkiaSharp/pull/1473">#1473</a>, <a href="https://github.com/mono/SkiaSharp/pull/1478">#1478</a>).</li>
+<li><strong><code>SKColorF</code> extension methods</strong> — New extensions to convert between native platform colors and <code>SKColorF</code> (<a href="https://github.com/mono/SkiaSharp/pull/1469">#1469</a>).</li>
+<li><strong>Replacement methods for obsoleted members</strong> — Added new methods to replace previously obsoleted APIs (<a href="https://github.com/mono/SkiaSharp/pull/1431">#1431</a>).</li>
+</ul>
+<h3 id="platform">Platform</h3>
+<ul>
+<li><strong>Uno Platform WASM support</strong> — CPU rendering views for WebAssembly via Uno Platform (<a href="https://github.com/mono/SkiaSharp/pull/1333">#1333</a>).</li>
+<li><strong>Uno Platform GPU views</strong> — New <code>SKSwapChainPanel</code> GPU view for Android, iOS, macOS, and WASM, plus further Uno integration (<a href="https://github.com/mono/SkiaSharp/pull/1429">#1429</a>, <a href="https://github.com/mono/SkiaSharp/pull/1420">#1420</a>).</li>
+<li><strong>Xamarin.Forms performance</strong> — Rendering performance improvements for Forms (<a href="https://github.com/mono/SkiaSharp/pull/1424">#1424</a>).</li>
+<li><strong>UWP non-blocking invalidation</strong> — UWP no longer blocks the UI thread when invalidating (<a href="https://github.com/mono/SkiaSharp/pull/1468">#1468</a>).</li>
+<li><strong>macOS redraw fix</strong> — Use <code>NeedsDisplay</code> instead of <code>Display</code> for correct macOS redraws (<a href="https://github.com/mono/SkiaSharp/pull/1475">#1475</a>).</li>
+</ul>
+<h3 id="build--packaging">Build &amp; Packaging</h3>
+<ul>
+<li><strong>Native-only NuGet package</strong> — A new package containing just the native binaries (<a href="https://github.com/mono/SkiaSharp/pull/1456">#1456</a>).</li>
+<li><strong>Debug bootstrapper builds</strong> — Passing <code>--configuration=debug</code> to the bootstrapper now produces a debug library (<a href="https://github.com/mono/SkiaSharp/pull/1418">#1418</a>).</li>
+</ul>
+<h2 id="bug-fixes">Bug Fixes</h2>
+<ul>
+<li><strong><code>SKSurface.Create</code> origin ignored</strong> — Fixed the origin parameter being ignored when creating surfaces. ❤️ <a href="https://github.com/ziriax">@ziriax</a> (<a href="https://github.com/mono/SkiaSharp/pull/1404">#1404</a>)</li>
+<li><strong><code>SKCanvas.DrawTextOnPath</code> null reference</strong> — Fixed a <code>NullReferenceException</code> in <code>DrawTextOnPath</code> on iOS. ❤️ <a href="https://github.com/ziriax">@ziriax</a> (<a href="https://github.com/mono/SkiaSharp/pull/1410">#1410</a>)</li>
+<li><strong><code>SKData</code> from non-seekable stream</strong> — Fixed an exception when creating <code>SKData</code> from a non-seekable stream (<a href="https://github.com/mono/SkiaSharp/pull/1411">#1411</a>).</li>
+<li><strong>ASP.NET <code>DllNotFoundException</code></strong> — Now checks the correct directory for native libraries under ASP.NET (<a href="https://github.com/mono/SkiaSharp/pull/1483">#1483</a>).</li>
+<li><strong>Image subset encoding</strong> — Fixed encoding overwriting the underlying pixels / encoding the full image instead of a subset (<a href="https://github.com/mono/SkiaSharp/pull/1457">#1457</a>).</li>
+<li><strong>WASM + GL</strong> — Use the correct native code for WASM with GL (<a href="https://github.com/mono/SkiaSharp/pull/1445">#1445</a>).</li>
+<li><strong>Transitive dependency native binaries</strong> — Native binaries now reach the final app via <code>buildTransitive</code> when only referenced transitively (<a href="https://github.com/mono/SkiaSharp/pull/1440">#1440</a>).</li>
+<li><strong>Text rendering</strong> — Use linear metrics for backwards compatibility and handle invalid text correctly (<a href="https://github.com/mono/SkiaSharp/pull/1439">#1439</a>, <a href="https://github.com/mono/SkiaSharp/pull/1438">#1438</a>).</li>
+<li><strong>Alpine no-dependency builds</strong> — Fixed Alpine builds that were still linking against fontconfig when asked not to (<a href="https://github.com/mono/SkiaSharp/pull/1416">#1416</a>).</li>
+<li><strong>Interop float return</strong> — Worked around cases where a float could not be returned correctly (<a href="https://github.com/mono/SkiaSharp/pull/1453">#1453</a>).</li>
+<li><strong><code>SetScaleTranslate</code> revert</strong> — Reverted a regression in <code>SetScaleTranslate</code> (<a href="https://github.com/mono/SkiaSharp/pull/1452">#1452</a>).</li>
+</ul>
+<h2 id="platform-support">Platform Support</h2>
+<table>
+<thead>
+<tr>
+<th>Platform</th>
+<th>What's New</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>🍎 Apple</td>
+<td>iOS <code>DrawTextOnPath</code> fix, macOS redraw fix</td>
+</tr>
+<tr>
+<td>🪟 Windows</td>
+<td>UWP non-blocking invalidation</td>
+</tr>
+<tr>
+<td>🐧 Linux</td>
+<td>Alpine no-dependency build fix</td>
+</tr>
+<tr>
+<td>🌐 WebAssembly</td>
+<td>Uno WASM CPU views, WASM + GL fix</td>
+</tr>
+<tr>
+<td>🎨 Core API</td>
+<td>Memory debugging APIs, <code>SKColorF</code> extensions</td>
+</tr>
+</tbody>
+</table>
+<h2 id="community-contributors-">Community Contributors ❤️</h2>
+<table>
+<thead>
+<tr>
+<th>Contributor</th>
+<th>What They Did</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/ziriax">@ziriax</a></td>
+<td>Fixed the ignored <code>SKSurface.Create</code> origin and the iOS <code>DrawTextOnPath</code> <code>NullReferenceException</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="links">Links</h2>
+<ul>
+<li><a href="https://github.com/mono/SkiaSharp/compare/v2.80.1...v2.80.2">Full Changelog</a></li>
+<li><a href="https://www.nuget.org/packages/SkiaSharp/2.80.2">NuGet Package</a></li>
+<li><a href="https://github.com/mono/SkiaSharp/tree/main/changelogs/SkiaSharp/2.80.2">API Diff</a></li>
+</ul>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/mono/SkiaSharp/blob/main/documentation/docfx/releases/2.80.2.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          main · main · 4b8e43f
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

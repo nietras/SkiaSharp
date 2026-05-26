@@ -1,0 +1,209 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Version 2.88.9 | SkiaSharp </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Version 2.88.9 | SkiaSharp ">
+      
+      
+      <link rel="icon" href="../images/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../TOC.html">
+      <meta name="docfx:tocrel" content="TOC.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/mono/SkiaSharp/blob/main/documentation/docfx/releases/2.88.9.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="version-2889">Version 2.88.9</h1>
+<!--
+  RAW PR DATA — Do not remove this comment block.
+  AI uses this data to generate the polished release notes below.
+  Re-run the script to refresh this data from git history.
+
+  Generated: 2026-06-16T19:39:51Z by generate-release-notes.py
+  version:   2.88.9
+  status:    stable
+  branch:    release/2.88.9
+  diff:      release/2.88.8..release/2.88.9
+  prs:       14
+
+  - Use a snapshot now that 4.0 has been removed by @mattleibow in https://github.com/mono/SkiaSharp/pull/3054 (49 commits, 36 days)
+  - Add symbols to the packages by @mattleibow in https://github.com/mono/SkiaSharp/pull/3046 (48 commits, 35 days)
+  - fix: Add WinUI native helper for GetByteBuffer by @jeromelaban in https://github.com/mono/SkiaSharp/pull/3039 [community ✨] (47 commits, 35 days)
+  - The fancy logic stopped working long ago by @mattleibow in https://github.com/mono/SkiaSharp/pull/3043 (46 commits, 34 days)
+  - Fix CI again using the new rollback locations by @mattleibow in https://github.com/mono/SkiaSharp/pull/3041 (46 commits, 33 days)
+  - Ignore some files to aid switching branches by @mattleibow in https://github.com/mono/SkiaSharp/pull/3021 (41 commits, 29 days)
+  - feat: Add support for .NET 9 (#3010) by @github-actions[bot] in https://github.com/mono/SkiaSharp/pull/3012 [community ✨] (41 commits, 29 days)
+  - Update the signing template by @mattleibow in https://github.com/mono/SkiaSharp/pull/2932 (42 commits, 29 days)
+  - Authenticate Docker by @mattleibow in https://github.com/mono/SkiaSharp/pull/2929 (41 commits, 27 days)
+  - Fix SKXamlCanvas on Uno Skia to use Bgra8888 (#2918) by @github-actions[bot] in https://github.com/mono/SkiaSharp/pull/2919 [community ✨] (38 commits, 26 days)
+  - Fix the GetKerningPairAdjustments API. (#2858) by @github-actions[bot] in https://github.com/mono/SkiaSharp/pull/2886 [community ✨] (36 commits, 25 days)
+  - fix: XamlRoot may be null when the SKXamlCanvas is unloaded (#2854) by @github-actions[bot] in https://github.com/mono/SkiaSharp/pull/2884 [community ✨] (36 commits, 25 days)
+  - Use new license expressions by @mattleibow in https://github.com/mono/SkiaSharp/pull/2877 (35 commits, 24 days)
+  - Work around annoying fake warning in the IDE by @mattleibow in https://github.com/mono/SkiaSharp/pull/2844 (36 commits, 23 days)
+-->
+<!-- Generated: 2026-06-16T18:45:00Z by claude-opus-4.8 -->
+
+<blockquote>
+<p><strong>.NET 9 &amp; platform fixes release</strong> · Released · <a href="https://www.nuget.org/packages/SkiaSharp/2.88.9">NuGet</a> · <a href="https://github.com/mono/SkiaSharp/releases/tag/v2.88.9">GitHub Release</a></p>
+</blockquote>
+<h2 id="highlights">Highlights</h2>
+<p>This release adds support for .NET 9 and ships a batch of WinUI/Uno <code>SKXamlCanvas</code> fixes, along with debug symbols now included in the packages. The WinUI native helper for <code>GetByteBuffer</code> was contributed by <a href="https://github.com/jeromelaban">@jeromelaban</a>.</p>
+<h2 id="new-features">New Features</h2>
+<h3 id="platform">Platform</h3>
+<ul>
+<li><strong>.NET 9 support</strong> — Adds targeting and support for .NET 9. (<a href="https://github.com/mono/SkiaSharp/pull/3012">#3012</a>)</li>
+<li><strong>WinUI <code>GetByteBuffer</code> native helper</strong> — Adds a native helper enabling <code>GetByteBuffer</code> on WinUI. ❤️ <a href="https://github.com/jeromelaban">@jeromelaban</a> (<a href="https://github.com/mono/SkiaSharp/pull/3039">#3039</a>)</li>
+</ul>
+<h3 id="api-surface">API Surface</h3>
+<ul>
+<li><strong>Debug symbols in packages</strong> — The NuGet packages now ship with symbols for easier debugging. (<a href="https://github.com/mono/SkiaSharp/pull/3046">#3046</a>)</li>
+</ul>
+<h2 id="bug-fixes">Bug Fixes</h2>
+<ul>
+<li><strong><code>SKXamlCanvas</code> on Uno Skia uses Bgra8888</strong> — Corrects the pixel format used by <code>SKXamlCanvas</code> on Uno Skia. (<a href="https://github.com/mono/SkiaSharp/pull/2919">#2919</a>)</li>
+<li><strong><code>GetKerningPairAdjustments</code> fix</strong> — Restores correct behaviour of the <code>GetKerningPairAdjustments</code> API. (<a href="https://github.com/mono/SkiaSharp/pull/2886">#2886</a>)</li>
+<li><strong>Null <code>XamlRoot</code> on unload</strong> — Guards against a null <code>XamlRoot</code> when an <code>SKXamlCanvas</code> is unloaded. (<a href="https://github.com/mono/SkiaSharp/pull/2884">#2884</a>)</li>
+</ul>
+<h2 id="platform-support">Platform Support</h2>
+<table>
+<thead>
+<tr>
+<th>Platform</th>
+<th>What's New</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>🎨 Core API</td>
+<td>.NET 9 support, debug symbols in packages</td>
+</tr>
+<tr>
+<td>🪟 Windows</td>
+<td>WinUI <code>GetByteBuffer</code> native helper</td>
+</tr>
+<tr>
+<td>🌐 WebAssembly</td>
+<td><code>SKXamlCanvas</code> Bgra8888 and <code>XamlRoot</code> fixes on Uno Skia</td>
+</tr>
+</tbody>
+</table>
+<h2 id="community-contributors-">Community Contributors ❤️</h2>
+<table>
+<thead>
+<tr>
+<th>Contributor</th>
+<th>What They Did</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/jeromelaban">@jeromelaban</a></td>
+<td>Added a WinUI native helper for <code>GetByteBuffer</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="links">Links</h2>
+<ul>
+<li><a href="https://github.com/mono/SkiaSharp/compare/v2.88.8...v2.88.9">Full Changelog</a></li>
+<li><a href="https://www.nuget.org/packages/SkiaSharp/2.88.9">NuGet Package</a></li>
+<li><a href="https://github.com/mono/SkiaSharp/tree/main/changelogs/SkiaSharp/2.88.9">API Diff</a></li>
+</ul>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/mono/SkiaSharp/blob/main/documentation/docfx/releases/2.88.9.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          main · main · 4b8e43f
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,214 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Version 1.68.1.1 | SkiaSharp </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Version 1.68.1.1 | SkiaSharp ">
+      
+      
+      <link rel="icon" href="../images/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../TOC.html">
+      <meta name="docfx:tocrel" content="TOC.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/mono/SkiaSharp/blob/4179/merge/documentation/docfx/releases/1.68.1.1.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="version-16811">Version 1.68.1.1</h1>
+<!--
+  RAW PR DATA — Do not remove this comment block.
+  AI uses this data to generate the polished release notes below.
+  Re-run the script to refresh this data from git history.
+
+  Generated: 2026-06-16T19:33:49Z by generate-release-notes.py
+  version:   1.68.1.1
+  status:    stable
+  branch:    release/1.68.1.1
+  diff:      release/1.68.1..release/1.68.1.1
+  prs:       16
+
+  - Remove an unused argument of type TaskScheduler from AnimatedSampleBase by @bender2k14 in https://github.com/mono/SkiaSharp/pull/1063 [community ✨] (4 commits, 2 days)
+  - suffices to start the rotation matrix as the identity matrix by @bender2k14 in https://github.com/mono/SkiaSharp/pull/1062 [community ✨] (1 commit, 1 day)
+  - Don't go straight for the max samples by @mattleibow in https://github.com/mono/SkiaSharp/pull/1060 (1 commit, 1 day)
+  - Add the .targets file to buildTransitive by @mattleibow in https://github.com/mono/SkiaSharp/pull/1057 (1 commit, 1 day)
+  - Correctly decode images by @mattleibow in https://github.com/mono/SkiaSharp/pull/1055 (3 commits, 2 days)
+  - Improve the Docker samples by @mattleibow in https://github.com/mono/SkiaSharp/pull/1051 (12 commits, 4 days)
+  - Pulling in some changes from other places by @mattleibow in https://github.com/mono/SkiaSharp/pull/1054 (1 commit, 1 day)
+  - Improve native build process + add Nano Server by @mattleibow in https://github.com/mono/SkiaSharp/pull/1040 (59 commits, 8 days)
+  - Assemblies are required in platform ref folders by @mattleibow in https://github.com/mono/SkiaSharp/pull/1044 (5 commits, 1 day)
+  - Use a patch update for now as this is just fixes by @mattleibow in https://github.com/mono/SkiaSharp/pull/1045 (5 commits, 1 day)
+  - Update README.md by @mattleibow in https://github.com/mono/SkiaSharp/pull/1043 (1 commit, 1 day)
+  - TryRemove instances WeakReferences by @daltonks in https://github.com/mono/SkiaSharp/pull/1039 [community ✨] (1 commit, 1 day)
+  - Add Code Checks by @mattleibow in https://github.com/mono/SkiaSharp/pull/1038 (8 commits, 1 day)
+  - Fix issues with harfbuzz strings by @mattleibow in https://github.com/mono/SkiaSharp/pull/1034 (3 commits, 2 days)
+  - Cherry pick some fixes for buffer overflow bugs by @mattleibow in https://github.com/mono/SkiaSharp/pull/1037 (1 commit, 1 day)
+  - Use Docker to Build Linux & Update Versions to v1.68.2 by @mattleibow in https://github.com/mono/SkiaSharp/pull/1036 (11 commits, 1 day)
+-->
+<!-- Generated: 2026-06-16T18:38:00Z by claude-opus-4.8 -->
+
+<blockquote>
+<p><strong>Bug-fix release</strong> · Released · <a href="https://www.nuget.org/packages/SkiaSharp/1.68.1.1">NuGet</a> · <a href="https://github.com/mono/SkiaSharp/releases/tag/v1.68.1.1">GitHub Release</a></p>
+</blockquote>
+<h2 id="highlights">Highlights</h2>
+<p>A focused patch release that corrects image decoding, hardens HarfBuzz string handling, and picks up upstream buffer-overflow fixes. Community contributors <a href="https://github.com/bender2k14">@bender2k14</a> and <a href="https://github.com/daltonks">@daltonks</a> landed fixes for sample rotation math and weak-reference cleanup.</p>
+<h2 id="new-features">New Features</h2>
+<h3 id="platform">Platform</h3>
+<ul>
+<li><strong>buildTransitive <code>.targets</code></strong> — Ships the package <code>.targets</code> file in the <code>buildTransitive</code> folder so it flows correctly to transitive consumers. (<a href="https://github.com/mono/SkiaSharp/pull/1057">#1057</a>)</li>
+<li><strong>Platform ref assemblies</strong> — Ensures the required assemblies are present in the platform reference folders. (<a href="https://github.com/mono/SkiaSharp/pull/1044">#1044</a>)</li>
+</ul>
+<h2 id="security">Security</h2>
+<ul>
+<li><strong>Buffer-overflow fixes</strong> — Cherry-picks upstream fixes for buffer-overflow bugs. (<a href="https://github.com/mono/SkiaSharp/pull/1037">#1037</a>)</li>
+</ul>
+<h2 id="bug-fixes">Bug Fixes</h2>
+<ul>
+<li><strong>Correct image decoding</strong> — Fixes incorrect decoding of certain images. (<a href="https://github.com/mono/SkiaSharp/pull/1055">#1055</a>)</li>
+<li><strong>HarfBuzz strings</strong> — Resolves issues with HarfBuzz string handling. (<a href="https://github.com/mono/SkiaSharp/pull/1034">#1034</a>)</li>
+<li><strong>Weak-reference cleanup</strong> — ❤️ <a href="https://github.com/daltonks">@daltonks</a> makes <code>TryRemove</code> clean up instance <code>WeakReference</code>s correctly. (<a href="https://github.com/mono/SkiaSharp/pull/1039">#1039</a>)</li>
+<li><strong>Rotation matrix identity</strong> — ❤️ <a href="https://github.com/bender2k14">@bender2k14</a> starts the rotation matrix as the identity matrix in the animated sample. (<a href="https://github.com/mono/SkiaSharp/pull/1062">#1062</a>)</li>
+<li><strong>Sample cleanup</strong> — ❤️ <a href="https://github.com/bender2k14">@bender2k14</a> removes an unused <code>TaskScheduler</code> argument from <code>AnimatedSampleBase</code>. (<a href="https://github.com/mono/SkiaSharp/pull/1063">#1063</a>)</li>
+<li><strong>GPU sampling</strong> — Avoids going straight for the maximum sample count. (<a href="https://github.com/mono/SkiaSharp/pull/1060">#1060</a>)</li>
+</ul>
+<h2 id="platform-support">Platform Support</h2>
+<table>
+<thead>
+<tr>
+<th>Platform</th>
+<th>What's New</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>🎨 Core API</td>
+<td>Correct image decoding, HarfBuzz string fixes, buffer-overflow hardening</td>
+</tr>
+<tr>
+<td>📦 General</td>
+<td><code>buildTransitive</code> <code>.targets</code>, platform ref assemblies</td>
+</tr>
+</tbody>
+</table>
+<h2 id="community-contributors-">Community Contributors ❤️</h2>
+<table>
+<thead>
+<tr>
+<th>Contributor</th>
+<th>What They Did</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/bender2k14">@bender2k14</a></td>
+<td>Fixed the sample rotation matrix and removed an unused <code>TaskScheduler</code> argument</td>
+</tr>
+<tr>
+<td><a href="https://github.com/daltonks">@daltonks</a></td>
+<td>Fixed <code>WeakReference</code> cleanup in <code>TryRemove</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="links">Links</h2>
+<ul>
+<li><a href="https://github.com/mono/SkiaSharp/compare/v1.68.1...v1.68.1.1">Full Changelog</a></li>
+<li><a href="https://www.nuget.org/packages/SkiaSharp/1.68.1.1">NuGet Package</a></li>
+<li><a href="https://github.com/mono/SkiaSharp/tree/main/changelogs/SkiaSharp/1.68.1.1">API Diff</a></li>
+</ul>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/mono/SkiaSharp/blob/4179/merge/documentation/docfx/releases/1.68.1.1.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          PR #4179 · mattleibow/api-diff-stable-rollup · 577b69d
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

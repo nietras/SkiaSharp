@@ -1,0 +1,342 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Version 1.68.2 | SkiaSharp </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Version 1.68.2 | SkiaSharp ">
+      
+      
+      <link rel="icon" href="../images/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../TOC.html">
+      <meta name="docfx:tocrel" content="TOC.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/mono/SkiaSharp/blob/main/documentation/docfx/releases/1.68.2.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="version-1682">Version 1.68.2</h1>
+<!--
+  RAW PR DATA — Do not remove this comment block.
+  AI uses this data to generate the polished release notes below.
+  Re-run the script to refresh this data from git history.
+
+  Generated: 2026-06-16T19:34:49Z by generate-release-notes.py
+  version:   1.68.2
+  status:    stable
+  branch:    release/1.68.2
+  diff:      release/1.68.1..release/1.68.2
+  prs:       71
+
+  - Update docs for release by @mattleibow in https://github.com/mono/SkiaSharp/pull/1263 (6 commits, 2 days)
+  - Prevent the GC from collecting "this" and "pixels" by @mattleibow in https://github.com/mono/SkiaSharp/pull/1258 (2 commits, 1 day)
+  - Rename some methods to be more .NET by @mattleibow in https://github.com/mono/SkiaSharp/pull/1255 (1 commit, 1 day)
+  - Null out the field when disposing. Fixes #960 by @mattleibow in https://github.com/mono/SkiaSharp/pull/1256 (1 commit, 1 day)
+  - No need to allocate on disposal by @mattleibow in https://github.com/mono/SkiaSharp/pull/1257 (2 commits, 1 day)
+  - Always reference netstandard by @mattleibow in https://github.com/mono/SkiaSharp/pull/1250 (1 commit, 1 day)
+  - Expose a generic, writable span for the pixels by @mattleibow in https://github.com/mono/SkiaSharp/pull/1242 (2 commits, 2 days)
+  - Use the correct URL for OpenJDK on Linux by @mattleibow in https://github.com/mono/SkiaSharp/pull/1245 (3 commits, 1 day)
+  - Fixed unit tests crashes and a WGL deadlock (#1228 for master) by @mattleibow in https://github.com/mono/SkiaSharp/pull/1237 (3 commits, 2 days)
+  - [Android.Views] Refresh the surface when recreated by @mattleibow in https://github.com/mono/SkiaSharp/pull/1234 (1 commit, 1 day)
+  - Remove the [Preserve] attribute by @mattleibow in https://github.com/mono/SkiaSharp/pull/1229 (3 commits, 1 day)
+  - Make sure to not dispose system fonts by @mattleibow in https://github.com/mono/SkiaSharp/pull/1224 (5 commits, 2 days)
+  - Remove reflection usage for SKObject creation by @Gillibald in https://github.com/mono/SkiaSharp/pull/1209 [community ✨] (3 commits, 1 day)
+  - Link Code of Conduct by @terrajobst in https://github.com/mono/SkiaSharp/pull/1216 [community ✨] (1 commit, 1 day)
+  - Update cake to 0.37 by @mattleibow in https://github.com/mono/SkiaSharp/pull/1215 (1 commit, 1 day)
+  - Update expat native library to 2.2.9 by @mattleibow in https://github.com/mono/SkiaSharp/pull/1214 (6 commits, 2 days)
+  - Update SKTouchHandler.cs to fix crash bug caused by passing incorrect parameter, added pressure and eraser handling by @mscherotter in https://github.com/mono/SkiaSharp/pull/1212 [community ✨] (10 commits, 3 days)
+  - Release the skia objects when the view is unloaded by @mattleibow in https://github.com/mono/SkiaSharp/pull/1213 (2 commits, 1 day)
+  - Add a test for text align by @mattleibow in https://github.com/mono/SkiaSharp/pull/1207 (4 commits, 2 days)
+  - Resolve some concurrency issues by @mattleibow in https://github.com/mono/SkiaSharp/pull/1200 (23 commits, 4 days)
+  - Fixing issue #1187 by @mattleibow in https://github.com/mono/SkiaSharp/pull/1206 (3 commits, 2 days)
+  - Added device type to touch events (touch, mouse, pen) by @mscherotter in https://github.com/mono/SkiaSharp/pull/1191 [community ✨] (2 commits, 2 days)
+  - The lang parameter is not used, so remove it. by @mattleibow in https://github.com/mono/SkiaSharp/pull/1190 (1 commit, 1 day)
+  - Re-work views to avoid incorrect disposal by @mattleibow in https://github.com/mono/SkiaSharp/pull/1180 (6 commits, 2 days)
+  - Merge filter factory overloads now accept null arguments by @ziriax in https://github.com/mono/SkiaSharp/pull/1185 [community ✨] (2 commits, 1 day)
+  - Add the expected overload for newer versions XF.Tizen by @mattleibow in https://github.com/mono/SkiaSharp/pull/1117 (26 commits, 10 days)
+  - Update all the build tools by @mattleibow in https://github.com/mono/SkiaSharp/pull/1175 (6 commits, 2 days)
+  - Use vcpkg to build ANGLE by @mattleibow in https://github.com/mono/SkiaSharp/pull/1158 (11 commits, 4 days)
+  - A few changes and improvements by @mattleibow in https://github.com/mono/SkiaSharp/pull/1153 (30 commits, 4 days)
+  - Change paint encoding instead of throwing #1151 by @mattleibow in https://github.com/mono/SkiaSharp/pull/1152 (1 commit, 1 day)
+  - Make sure the view is still in the hierarchy by @mattleibow in https://github.com/mono/SkiaSharp/pull/1143 (1 commit, 1 day)
+  - Before drawing, MakeCurrent by @mattleibow in https://github.com/mono/SkiaSharp/pull/1141 (1 commit, 1 day)
+  - Add a WPF for .NET Core sample by @mattleibow in https://github.com/mono/SkiaSharp/pull/1140 (1 commit, 1 day)
+  - Queue the redraw. Fixes #1074 by @mattleibow in https://github.com/mono/SkiaSharp/pull/1135 (1 commit, 1 day)
+  - Prevent double load issue. Fixes #1118 by @mattleibow in https://github.com/mono/SkiaSharp/pull/1133 (1 commit, 1 day)
+  - Added more from SKImage by @mattleibow in https://github.com/mono/SkiaSharp/pull/1126 (2 commits, 2 days)
+  - Added the rest of SKRegion members by @mattleibow in https://github.com/mono/SkiaSharp/pull/1125 (2 commits, 1 day)
+  - More Improvements by @mattleibow in https://github.com/mono/SkiaSharp/pull/1123 (11 commits, 2 days)
+  - Improve Generator & Structs by @mattleibow in https://github.com/mono/SkiaSharp/pull/1122 (2 commits, 1 day)
+  - Adding the SKColorF (with SKColorSpace) overloads by @mattleibow in https://github.com/mono/SkiaSharp/pull/1116 (8 commits, 3 days)
+  - Update the build for the new team by @mattleibow in https://github.com/mono/SkiaSharp/pull/1120 (4 commits, 3 days)
+  - Update Xamarin.Forms to v4.2.0.910310 by @mattleibow in https://github.com/mono/SkiaSharp/pull/1109 (6 commits, 2 days)
+  - Make sure all things are listed in cgmanifest.json by @mattleibow in https://github.com/mono/SkiaSharp/pull/1103 (4 commits, 1 day)
+  - Fix issues with buffer samples #1087 by @mattleibow in https://github.com/mono/SkiaSharp/pull/1098 (1 commit, 1 day)
+  - SKGLViewRenderer dispose corrections by @zbyszekpy in https://github.com/mono/SkiaSharp/pull/1095 [community ✨] (1 commit, 1 day)
+  - Add a few more members for SKCanvas by @mattleibow in https://github.com/mono/SkiaSharp/pull/1090 (5 commits, 2 days)
+  - [WIP] Add GTK views for Xamarin.Forms by @mattleibow in https://github.com/mono/SkiaSharp/pull/1089 (29 commits, 7 days)
+  - Fix broken antialiasing with UWP SKSwapChainPanel by @validvoid in https://github.com/mono/SkiaSharp/pull/1086 [community ✨] (1 commit, 1 day)
+  - Fix some issues with macOS SKGLView by @mattleibow in https://github.com/mono/SkiaSharp/pull/1083 (1 commit, 1 day)
+  - Multi-target SkiaSharp.Views.Windows.Forms by @mattleibow in https://github.com/mono/SkiaSharp/pull/1082 (5 commits, 1 day)
+  - WPF Mouse Wheel on Touch Event by @alexandrvslv in https://github.com/mono/SkiaSharp/pull/1079 [community ✨] (1 commit, 1 day)
+  - Update the OpenJDK and Tizen bits by @mattleibow in https://github.com/mono/SkiaSharp/pull/1015 (4 commits, 4 days)
+  - Add SKShader binding to create Improved Perlin noise by @mattleibow in https://github.com/mono/SkiaSharp/pull/1056 (3 commits, 3 days)
+  - Update to v1.68.2 by @mattleibow in https://github.com/mono/SkiaSharp/pull/1077 (4 commits, 2 days)
+  - Upgrade to VS2019 and .NET Core 3.0 by @mattleibow in https://github.com/mono/SkiaSharp/pull/1030 (44 commits, 12 days)
+  - Remove an unused argument of type TaskScheduler from AnimatedSampleBase by @bender2k14 in https://github.com/mono/SkiaSharp/pull/1063 [community ✨] (4 commits, 2 days)
+  - suffices to start the rotation matrix as the identity matrix by @bender2k14 in https://github.com/mono/SkiaSharp/pull/1062 [community ✨] (1 commit, 1 day)
+  - Don't go straight for the max samples by @mattleibow in https://github.com/mono/SkiaSharp/pull/1060 (1 commit, 1 day)
+  - Add the .targets file to buildTransitive by @mattleibow in https://github.com/mono/SkiaSharp/pull/1057 (1 commit, 1 day)
+  - Correctly decode images by @mattleibow in https://github.com/mono/SkiaSharp/pull/1055 (3 commits, 2 days)
+  - Improve the Docker samples by @mattleibow in https://github.com/mono/SkiaSharp/pull/1051 (12 commits, 4 days)
+  - Pulling in some changes from other places by @mattleibow in https://github.com/mono/SkiaSharp/pull/1054 (1 commit, 1 day)
+  - Improve native build process + add Nano Server by @mattleibow in https://github.com/mono/SkiaSharp/pull/1040 (59 commits, 8 days)
+  - Assemblies are required in platform ref folders by @mattleibow in https://github.com/mono/SkiaSharp/pull/1044 (5 commits, 1 day)
+  - Use a patch update for now as this is just fixes by @mattleibow in https://github.com/mono/SkiaSharp/pull/1045 (5 commits, 1 day)
+  - Update README.md by @mattleibow in https://github.com/mono/SkiaSharp/pull/1043 (1 commit, 1 day)
+  - TryRemove instances WeakReferences by @daltonks in https://github.com/mono/SkiaSharp/pull/1039 [community ✨] (1 commit, 1 day)
+  - Add Code Checks by @mattleibow in https://github.com/mono/SkiaSharp/pull/1038 (8 commits, 1 day)
+  - Fix issues with harfbuzz strings by @mattleibow in https://github.com/mono/SkiaSharp/pull/1034 (3 commits, 2 days)
+  - Cherry pick some fixes for buffer overflow bugs by @mattleibow in https://github.com/mono/SkiaSharp/pull/1037 (1 commit, 1 day)
+  - Use Docker to Build Linux & Update Versions to v1.68.2 by @mattleibow in https://github.com/mono/SkiaSharp/pull/1036 (11 commits, 1 day)
+-->
+<!-- Generated: 2026-06-16T18:39:14Z by claude-opus-4.8 -->
+
+<blockquote>
+<p><strong>Stability, API surface, and new platform views</strong> · Released · <a href="https://www.nuget.org/packages/SkiaSharp/1.68.2">NuGet</a> · <a href="https://github.com/mono/SkiaSharp/releases/tag/v1.68.2">GitHub Release</a></p>
+</blockquote>
+<h2 id="highlights">Highlights</h2>
+<p>A large release that expands the API surface (<code>SKColorF</code> overloads, more <code>SKImage</code>, <code>SKRegion</code>, and <code>SKCanvas</code> members, and writable pixel spans), introduces GTK views for Xamarin.Forms, and resolves a broad set of view disposal, concurrency, and memory issues. Nine community contributors — including <a href="https://github.com/Gillibald">@Gillibald</a>, <a href="https://github.com/mscherotter">@mscherotter</a>, and <a href="https://github.com/ziriax">@ziriax</a> — landed user-facing improvements across the views and bindings.</p>
+<h2 id="new-features">New Features</h2>
+<h3 id="engine">Engine</h3>
+<ul>
+<li><strong>Updated expat to 2.2.9</strong> — Refreshes the bundled expat native dependency. (<a href="https://github.com/mono/SkiaSharp/pull/1214">#1214</a>)</li>
+<li><strong>Buffer overflow fixes</strong> — Cherry-picks upstream fixes for buffer overflow bugs. (<a href="https://github.com/mono/SkiaSharp/pull/1037">#1037</a>)</li>
+</ul>
+<h3 id="gpu--rendering">GPU &amp; Rendering</h3>
+<ul>
+<li><strong>Improved Perlin noise shader</strong> — Adds an <code>SKShader</code> binding to create improved Perlin noise. (<a href="https://github.com/mono/SkiaSharp/pull/1056">#1056</a>)</li>
+</ul>
+<h3 id="api-surface">API Surface</h3>
+<ul>
+<li><strong>Writable pixel spans</strong> — Exposes a generic, writable <code>Span&lt;T&gt;</code> over pixel data. (<a href="https://github.com/mono/SkiaSharp/pull/1242">#1242</a>)</li>
+<li><strong><code>SKColorF</code> overloads</strong> — Adds <code>SKColorF</code> overloads with <code>SKColorSpace</code> support. (<a href="https://github.com/mono/SkiaSharp/pull/1116">#1116</a>)</li>
+<li><strong>More <code>SKImage</code> members</strong> — Rounds out the <code>SKImage</code> API. (<a href="https://github.com/mono/SkiaSharp/pull/1126">#1126</a>)</li>
+<li><strong>Complete <code>SKRegion</code> members</strong> — Adds the remaining <code>SKRegion</code> members. (<a href="https://github.com/mono/SkiaSharp/pull/1125">#1125</a>)</li>
+<li><strong>More <code>SKCanvas</code> members</strong> — Adds additional members to <code>SKCanvas</code>. (<a href="https://github.com/mono/SkiaSharp/pull/1090">#1090</a>)</li>
+<li><strong>Reflection-free object creation</strong> — Removes reflection usage from <code>SKObject</code> creation for better performance. ❤️ <a href="https://github.com/Gillibald">@Gillibald</a> (<a href="https://github.com/mono/SkiaSharp/pull/1209">#1209</a>)</li>
+<li><strong>More .NET-friendly method names</strong> — Renames some methods to follow .NET conventions. (<a href="https://github.com/mono/SkiaSharp/pull/1255">#1255</a>)</li>
+<li><strong>Nullable merge filter overloads</strong> — Merge filter factory overloads now accept <code>null</code> arguments. ❤️ <a href="https://github.com/ziriax">@ziriax</a> (<a href="https://github.com/mono/SkiaSharp/pull/1185">#1185</a>)</li>
+</ul>
+<h3 id="platform">Platform</h3>
+<ul>
+<li><strong>GTK views for Xamarin.Forms</strong> — Adds GTK view support for Xamarin.Forms. (<a href="https://github.com/mono/SkiaSharp/pull/1089">#1089</a>)</li>
+<li><strong>Multi-targeted Windows.Forms views</strong> — <code>SkiaSharp.Views.Windows.Forms</code> is now multi-targeted. (<a href="https://github.com/mono/SkiaSharp/pull/1082">#1082</a>)</li>
+<li><strong>Newer XF.Tizen overload</strong> — Adds the expected overload for newer versions of Xamarin.Forms Tizen. (<a href="https://github.com/mono/SkiaSharp/pull/1117">#1117</a>)</li>
+<li><strong>Richer touch events</strong> — Adds device type (touch, mouse, pen) to touch events, plus pressure and eraser handling. ❤️ <a href="https://github.com/mscherotter">@mscherotter</a> (<a href="https://github.com/mono/SkiaSharp/pull/1191">#1191</a>, <a href="https://github.com/mono/SkiaSharp/pull/1212">#1212</a>)</li>
+<li><strong>VS2019 and .NET Core 3.0</strong> — Upgrades the build to Visual Studio 2019 and .NET Core 3.0. (<a href="https://github.com/mono/SkiaSharp/pull/1030">#1030</a>)</li>
+<li><strong>Improved native build + Nano Server</strong> — Improves the native build process and adds Nano Server support. (<a href="https://github.com/mono/SkiaSharp/pull/1040">#1040</a>)</li>
+</ul>
+<h2 id="bug-fixes">Bug Fixes</h2>
+<ul>
+<li><strong>GC no longer collects live objects</strong> — Prevents the GC from collecting <code>this</code> and <code>pixels</code> during native calls. (<a href="https://github.com/mono/SkiaSharp/pull/1258">#1258</a>)</li>
+<li><strong>Cleared fields on dispose</strong> — Nulls out the field when disposing. Fixes #960. (<a href="https://github.com/mono/SkiaSharp/pull/1256">#1256</a>)</li>
+<li><strong>No allocation on disposal</strong> — Removes an unnecessary allocation during disposal. (<a href="https://github.com/mono/SkiaSharp/pull/1257">#1257</a>)</li>
+<li><strong>Removed <code>[Preserve]</code> attribute</strong> — Drops the obsolete <code>[Preserve]</code> attribute. (<a href="https://github.com/mono/SkiaSharp/pull/1229">#1229</a>)</li>
+<li><strong>System fonts no longer disposed</strong> — Ensures system fonts are not accidentally disposed. (<a href="https://github.com/mono/SkiaSharp/pull/1224">#1224</a>)</li>
+<li><strong>Concurrency fixes</strong> — Resolves a number of concurrency issues. (<a href="https://github.com/mono/SkiaSharp/pull/1200">#1200</a>)</li>
+<li><strong>Fixed test crashes and WGL deadlock</strong> — Fixes unit test crashes and a WGL deadlock. (<a href="https://github.com/mono/SkiaSharp/pull/1237">#1237</a>)</li>
+<li><strong>Android surface refresh</strong> — Refreshes the Android view surface when it is recreated. (<a href="https://github.com/mono/SkiaSharp/pull/1234">#1234</a>)</li>
+<li><strong>Reworked view disposal</strong> — Re-works views to avoid incorrect disposal and releases Skia objects when a view is unloaded. (<a href="https://github.com/mono/SkiaSharp/pull/1180">#1180</a>, <a href="https://github.com/mono/SkiaSharp/pull/1213">#1213</a>)</li>
+<li><strong>UWP <code>SKSwapChainPanel</code> antialiasing</strong> — Fixes broken antialiasing with the UWP <code>SKSwapChainPanel</code>. ❤️ <a href="https://github.com/validvoid">@validvoid</a> (<a href="https://github.com/mono/SkiaSharp/pull/1086">#1086</a>)</li>
+<li><strong><code>SKGLViewRenderer</code> disposal</strong> — Corrects <code>SKGLViewRenderer</code> disposal. ❤️ <a href="https://github.com/zbyszekpy">@zbyszekpy</a> (<a href="https://github.com/mono/SkiaSharp/pull/1095">#1095</a>)</li>
+<li><strong>WPF mouse wheel on touch</strong> — Handles the WPF mouse wheel during touch events. ❤️ <a href="https://github.com/alexandrvslv">@alexandrvslv</a> (<a href="https://github.com/mono/SkiaSharp/pull/1079">#1079</a>)</li>
+<li><strong>Weak reference cleanup</strong> — <code>TryRemove</code>s instances from <code>WeakReference</code>s. ❤️ <a href="https://github.com/daltonks">@daltonks</a> (<a href="https://github.com/mono/SkiaSharp/pull/1039">#1039</a>)</li>
+<li><strong>macOS <code>SKGLView</code> fixes</strong> — Fixes a few issues with the macOS <code>SKGLView</code>. (<a href="https://github.com/mono/SkiaSharp/pull/1083">#1083</a>)</li>
+<li><strong>Correct image decoding</strong> — Fixes incorrect image decoding. (<a href="https://github.com/mono/SkiaSharp/pull/1055">#1055</a>)</li>
+<li><strong>HarfBuzz string fixes</strong> — Fixes issues with HarfBuzz strings. (<a href="https://github.com/mono/SkiaSharp/pull/1034">#1034</a>)</li>
+<li><strong>Paint encoding fallback</strong> — Changes paint encoding instead of throwing. (<a href="https://github.com/mono/SkiaSharp/pull/1152">#1152</a>)</li>
+<li><strong>Redraw and load fixes</strong> — Queues the redraw (fixes #1074), keeps the view in the hierarchy, calls <code>MakeCurrent</code> before drawing, and prevents a double-load issue (fixes #1118). (<a href="https://github.com/mono/SkiaSharp/pull/1135">#1135</a>, <a href="https://github.com/mono/SkiaSharp/pull/1143">#1143</a>, <a href="https://github.com/mono/SkiaSharp/pull/1141">#1141</a>, <a href="https://github.com/mono/SkiaSharp/pull/1133">#1133</a>)</li>
+</ul>
+<p>Plus several build, CI, and documentation improvements.</p>
+<h2 id="platform-support">Platform Support</h2>
+<table>
+<thead>
+<tr>
+<th>Platform</th>
+<th>What's New</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>🎨 Core API</td>
+<td>Writable pixel spans, <code>SKColorF</code>/<code>SKImage</code>/<code>SKRegion</code>/<code>SKCanvas</code> members, Perlin noise shader</td>
+</tr>
+<tr>
+<td>🍎 Apple</td>
+<td>macOS <code>SKGLView</code> fixes</td>
+</tr>
+<tr>
+<td>🪟 Windows</td>
+<td>Multi-targeted Windows.Forms views, UWP <code>SKSwapChainPanel</code> antialiasing, WPF touch fixes</td>
+</tr>
+<tr>
+<td>🤖 Android</td>
+<td>Surface refresh on recreation</td>
+</tr>
+<tr>
+<td>🐧 Linux</td>
+<td>GTK views for Xamarin.Forms</td>
+</tr>
+</tbody>
+</table>
+<h2 id="community-contributors-">Community Contributors ❤️</h2>
+<table>
+<thead>
+<tr>
+<th>Contributor</th>
+<th>What They Did</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/Gillibald">@Gillibald</a></td>
+<td>Removed reflection usage from <code>SKObject</code> creation</td>
+</tr>
+<tr>
+<td><a href="https://github.com/mscherotter">@mscherotter</a></td>
+<td>Added device type, pressure, and eraser handling to touch events</td>
+</tr>
+<tr>
+<td><a href="https://github.com/ziriax">@ziriax</a></td>
+<td>Allowed <code>null</code> arguments in merge filter factory overloads</td>
+</tr>
+<tr>
+<td><a href="https://github.com/validvoid">@validvoid</a></td>
+<td>Fixed UWP <code>SKSwapChainPanel</code> antialiasing</td>
+</tr>
+<tr>
+<td><a href="https://github.com/zbyszekpy">@zbyszekpy</a></td>
+<td>Corrected <code>SKGLViewRenderer</code> disposal</td>
+</tr>
+<tr>
+<td><a href="https://github.com/alexandrvslv">@alexandrvslv</a></td>
+<td>Added WPF mouse wheel handling on touch events</td>
+</tr>
+<tr>
+<td><a href="https://github.com/daltonks">@daltonks</a></td>
+<td>Cleaned up weak reference tracking</td>
+</tr>
+<tr>
+<td><a href="https://github.com/bender2k14">@bender2k14</a></td>
+<td>Sample cleanups</td>
+</tr>
+<tr>
+<td><a href="https://github.com/terrajobst">@terrajobst</a></td>
+<td>Linked the Code of Conduct</td>
+</tr>
+</tbody>
+</table>
+<h2 id="links">Links</h2>
+<ul>
+<li><a href="https://github.com/mono/SkiaSharp/compare/v1.68.1...v1.68.2">Full Changelog</a></li>
+<li><a href="https://www.nuget.org/packages/SkiaSharp/1.68.2">NuGet Package</a></li>
+<li><a href="https://github.com/mono/SkiaSharp/tree/main/changelogs/SkiaSharp/1.68.2">API Diff</a></li>
+</ul>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/mono/SkiaSharp/blob/main/documentation/docfx/releases/1.68.2.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          main · main · 4b8e43f
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

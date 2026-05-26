@@ -1,0 +1,316 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Version 2.88.0 | SkiaSharp </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Version 2.88.0 | SkiaSharp ">
+      
+      
+      <link rel="icon" href="../images/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../TOC.html">
+      <meta name="docfx:tocrel" content="TOC.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/mono/SkiaSharp/blob/4179/merge/documentation/docfx/releases/2.88.0.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="version-2880">Version 2.88.0</h1>
+<!--
+  RAW PR DATA — Do not remove this comment block.
+  AI uses this data to generate the polished release notes below.
+  Re-run the script to refresh this data from git history.
+
+  Generated: 2026-06-16T19:37:44Z by generate-release-notes.py
+  version:   2.88.0
+  status:    stable
+  branch:    release/2.88.0
+  diff:      release/2.80.4..release/2.88.0
+  prs:       63
+
+  - Build stable of everything by @mattleibow in https://github.com/mono/SkiaSharp/pull/2034 (3 commits, 2 days)
+  - Update to Maui RC 4 by @mattleibow in https://github.com/mono/SkiaSharp/pull/2032 (5 commits, 1 day)
+  - Build using .NET 6.0.300 public by @mattleibow in https://github.com/mono/SkiaSharp/pull/2031 (3 commits, 1 day)
+  - Don't try sign on forks by @mattleibow in https://github.com/mono/SkiaSharp/pull/1992 (10 commits, 2 days)
+  - Update to .NET MAUI RC 3 by @mattleibow in https://github.com/mono/SkiaSharp/pull/2029 (4 commits, 2 days)
+  - Try p/invoking to libdl.so.2 before libdl.so by @akoeplinger in https://github.com/mono/SkiaSharp/pull/2010 [community ✨] (1 commit, 1 day)
+  - Building using .NET MAUI RC 2 by @mattleibow in https://github.com/mono/SkiaSharp/pull/2004 (8 commits, 5 days)
+  - Update MAUI to RC 1 and use a macOS Monterey pool by @mattleibow in https://github.com/mono/SkiaSharp/pull/1986 (65 commits, 8 days)
+  - Use an older Xamarin.Android preview via the stable VS by @mattleibow in https://github.com/mono/SkiaSharp/pull/1993 (8 commits, 3 days)
+  - Update to macOS 11 by @mattleibow in https://github.com/mono/SkiaSharp/pull/1988 (46 commits, 5 days)
+  - Update Maui to the later P14 by @mattleibow in https://github.com/mono/SkiaSharp/pull/1967 (3 commits, 1 day)
+  - Split tests and samples into a new pipeline by @mattleibow in https://github.com/mono/SkiaSharp/pull/1963 (64 commits, 6 days)
+  - Update MAUI to Preview 14 by @mattleibow in https://github.com/mono/SkiaSharp/pull/1965 (8 commits, 2 days)
+  - Use Python 3.x and Clang 12.x by @mattleibow in https://github.com/mono/SkiaSharp/pull/1959 (60 commits, 7 days)
+  - Generate Software Bill of Materials (SBOM) manifest by @mjbond-msft in https://github.com/mono/SkiaSharp/pull/1954 [community ✨] (4 commits, 3 days)
+  - So many issues resolved by @mattleibow in https://github.com/mono/SkiaSharp/pull/1958 (1 commit, 1 day)
+  - Skip the preview feed if not on a preview .NET by @mattleibow in https://github.com/mono/SkiaSharp/pull/1957 (2 commits, 1 day)
+  - Try build without manually installing .NET Core by @mattleibow in https://github.com/mono/SkiaSharp/pull/1956 (7 commits, 2 days)
+  - Make use of the newer/better/faster/more-er 1ES build agents by @mattleibow in https://github.com/mono/SkiaSharp/pull/1946 (30 commits, 1 day)
+  - Force a single CPU on macOS/Linux by @mattleibow in https://github.com/mono/SkiaSharp/pull/1944 (1 commit, 1 day)
+  - Build with Maui Preview 13 by @mattleibow in https://github.com/mono/SkiaSharp/pull/1942 (3 commits, 2 days)
+  - Update maui to Preview 12 by @mattleibow in https://github.com/mono/SkiaSharp/pull/1932 (24 commits, 3 days)
+  - [android] don't include .so files in class libraries by @jonathanpeppers in https://github.com/mono/SkiaSharp/pull/1895 [community ✨] (1 commit, 1 day)
+  - Bumps to Uno 4.0 by @jeromelaban in https://github.com/mono/SkiaSharp/pull/1873 [community ✨] (1 commit, 1 day)
+  - Update to Maui Preview 11 by @mattleibow in https://github.com/mono/SkiaSharp/pull/1890 (10 commits, 2 days)
+  - [Blazor] prevent infinite loop in SKCanvasView by @JensKrumsieck in https://github.com/mono/SkiaSharp/pull/1889 [community ✨] (2 commits, 2 days)
+  - Fix the Mac Catalyst build task Inputs/Outputs by @mattleibow in https://github.com/mono/SkiaSharp/pull/1865 (1 commit, 1 day)
+  - Replace HandleDictionary lock with a critical section under Windows by @toptensoftware in https://github.com/mono/SkiaSharp/pull/1817 [community ✨] (14 commits, 9 days)
+  - Never dispose the native statics by @mattleibow in https://github.com/mono/SkiaSharp/pull/1863 (1 commit, 1 day)
+  - Try to build faster on demand by @mattleibow in https://github.com/mono/SkiaSharp/pull/1859 (18 commits, 3 days)
+  - Work around enums not being blittable by @mattleibow in https://github.com/mono/SkiaSharp/pull/1857 (4 commits, 1 day)
+  - Try this again by @mattleibow in https://github.com/mono/SkiaSharp/pull/1843 (6 commits, 4 days)
+  - Update MAUI sample by @mattleibow in https://github.com/mono/SkiaSharp/pull/1851 (1 commit, 1 day)
+  - Update all the things by @mattleibow in https://github.com/mono/SkiaSharp/pull/1842 (14 commits, 1 day)
+  - Add some of the new APIs by @mattleibow in https://github.com/mono/SkiaSharp/pull/1828 (6 commits, 4 days)
+  - Clean up the publish for samples by @mattleibow in https://github.com/mono/SkiaSharp/pull/1827 (1 commit, 1 day)
+  - Support ASP.NET Blazor Web Assembly Components by @mattleibow in https://github.com/mono/SkiaSharp/pull/1811 (43 commits, 10 days)
+  - Bump Maui to RC 2 / P9 by @mattleibow in https://github.com/mono/SkiaSharp/pull/1815 (11 commits, 6 days)
+  - [android] eliminate lots of fields in Resource.designer.cs by @jonathanpeppers in https://github.com/mono/SkiaSharp/pull/1812 [community ✨] (1 commit, 1 day)
+  - Native Windows Symbols + HarfBuzzSharp.NativeAssets.* by @mattleibow in https://github.com/mono/SkiaSharp/pull/1797 (13 commits, 5 days)
+  - Fix the what the `IgnorePixelScaling` property works by @mattleibow in https://github.com/mono/SkiaSharp/pull/1804 (17 commits, 4 days)
+  - Build using the older gcc 6.2 and new llvm 10 compiler by @mattleibow in https://github.com/mono/SkiaSharp/pull/1806 (2 commits, 1 day)
+  - Update to WindowsAppSDK by @mattleibow in https://github.com/mono/SkiaSharp/pull/1800 (5 commits, 1 day)
+  - Switch to .NET Tool version of Cake by @mattleibow in https://github.com/mono/SkiaSharp/pull/1793 (32 commits, 3 days)
+  - Reduce the size of the artifacts by @mattleibow in https://github.com/mono/SkiaSharp/pull/1788 (15 commits, 2 days)
+  - Update MAUI to RC 1 by @mattleibow in https://github.com/mono/SkiaSharp/pull/1782 (12 commits, 8 days)
+  - Add main PDB files to the packages by @mattleibow in https://github.com/mono/SkiaSharp/pull/1781 (6 commits, 2 days)
+  - Update HarfBuzz to 2.8.2 by @mattleibow in https://github.com/mono/SkiaSharp/pull/1766 (12 commits, 4 days)
+  - Add support for Xamarin.Forms on netcoreapp3.1 by @mattleibow in https://github.com/mono/SkiaSharp/pull/1774 (3 commits, 2 days)
+  - Use the correct MacCatalyst targets file name by @mattleibow in https://github.com/mono/SkiaSharp/pull/1762 (2 commits, 1 day)
+  - Add Mac Catalyst support by @mattleibow in https://github.com/mono/SkiaSharp/pull/1760 (11 commits, 2 days)
+  - Split SkiaSharp package into smaller "Native Asset" packages by @mattleibow in https://github.com/mono/SkiaSharp/pull/1758 (7 commits, 3 days)
+  - Use Invoke for Actions by @mattleibow in https://github.com/mono/SkiaSharp/pull/1754 (2 commits, 1 day)
+  - Use the new Maui P7 by @mattleibow in https://github.com/mono/SkiaSharp/pull/1749 (17 commits, 3 days)
+  - [Wasm] Add support for emscripten 2.0.23 by @jeromelaban in https://github.com/mono/SkiaSharp/pull/1746 [community ✨] (2 commits, 2 days)
+  - Update .NET 6 by @mattleibow in https://github.com/mono/SkiaSharp/pull/1740 (19 commits, 3 days)
+  - Ensure that VS is set up correctly by @mattleibow in https://github.com/mono/SkiaSharp/pull/1736 (1 commit, 1 day)
+  - Protect NRE in .NET MAUI SKCanvasView by @jsuarezruiz in https://github.com/mono/SkiaSharp/pull/1734 [community ✨] (1 commit, 1 day)
+  - iOS requires that the view have a background by @mattleibow in https://github.com/mono/SkiaSharp/pull/1730 (1 commit, 1 day)
+  - Add .NET MAUI views (compat and handlers) by @mattleibow in https://github.com/mono/SkiaSharp/pull/1678 (80 commits, 12 days)
+  - Free up space by deleting samples as they build by @mattleibow in https://github.com/mono/SkiaSharp/pull/1721 (4 commits, 1 day)
+  - Add net6.0-* for the binding projects by @mattleibow in https://github.com/mono/SkiaSharp/pull/1707 (65 commits, 11 days)
+  - Add Mac Catalyst, use frameworks and move things into the gn files (develop edition) by @mattleibow in https://github.com/mono/SkiaSharp/pull/1681 (15 commits, 6 days)
+-->
+<!-- Generated: 2026-06-16T18:38:00Z by claude-opus-4.8 -->
+
+<blockquote>
+<p><strong>.NET MAUI &amp; .NET 6 release</strong> · Released · <a href="https://www.nuget.org/packages/SkiaSharp/2.88.0">NuGet</a> · <a href="https://github.com/mono/SkiaSharp/releases/tag/v2.88.0">GitHub Release</a></p>
+</blockquote>
+<h2 id="highlights">Highlights</h2>
+<p>A landmark release that brings first-class <strong>.NET MAUI</strong> views (both compatibility shims and handlers), <strong>Mac Catalyst</strong> support, <strong>ASP.NET Blazor WebAssembly</strong> components, and full <strong>.NET 6 / <code>net6.0</code></strong> targets. The SkiaSharp package was also split into smaller per-platform &quot;Native Asset&quot; packages, and HarfBuzz was updated to 2.8.2. Several community contributors helped across Android, Uno, WebAssembly, and compliance.</p>
+<h2 id="new-features">New Features</h2>
+<h3 id="api-surface">API Surface</h3>
+<ul>
+<li><strong>.NET MAUI views</strong> — Adds <code>SkiaSharp.Views.Maui</code> with both compatibility views and handlers. (<a href="https://github.com/mono/SkiaSharp/pull/1678">#1678</a>)</li>
+<li><strong>New drawing APIs</strong> — Surfaces additional Skia APIs to the managed binding. (<a href="https://github.com/mono/SkiaSharp/pull/1828">#1828</a>)</li>
+</ul>
+<h3 id="text--fonts">Text &amp; Fonts</h3>
+<ul>
+<li><strong>HarfBuzz 2.8.2</strong> — Updates the bundled HarfBuzz to 2.8.2. (<a href="https://github.com/mono/SkiaSharp/pull/1766">#1766</a>)</li>
+</ul>
+<h3 id="platform">Platform</h3>
+<ul>
+<li><strong>Mac Catalyst</strong> — Adds Mac Catalyst support, moving build configuration into the <code>gn</code> files. (<a href="https://github.com/mono/SkiaSharp/pull/1760">#1760</a>, <a href="https://github.com/mono/SkiaSharp/pull/1681">#1681</a>)</li>
+<li><strong>ASP.NET Blazor WebAssembly</strong> — Adds support for Blazor WebAssembly components. (<a href="https://github.com/mono/SkiaSharp/pull/1811">#1811</a>)</li>
+<li><strong>.NET 6 targets</strong> — Adds <code>net6.0-*</code> targets for the binding projects. (<a href="https://github.com/mono/SkiaSharp/pull/1707">#1707</a>, <a href="https://github.com/mono/SkiaSharp/pull/1740">#1740</a>)</li>
+<li><strong>Xamarin.Forms on <code>netcoreapp3.1</code></strong> — Adds Xamarin.Forms support on .NET Core 3.1. (<a href="https://github.com/mono/SkiaSharp/pull/1774">#1774</a>)</li>
+<li><strong>WindowsAppSDK</strong> — Moves Windows support onto the WindowsAppSDK. (<a href="https://github.com/mono/SkiaSharp/pull/1800">#1800</a>)</li>
+<li><strong>Native Asset packages</strong> — Splits the SkiaSharp package into smaller per-platform &quot;Native Asset&quot; packages, with native Windows symbols and <code>HarfBuzzSharp.NativeAssets.*</code>. (<a href="https://github.com/mono/SkiaSharp/pull/1758">#1758</a>, <a href="https://github.com/mono/SkiaSharp/pull/1797">#1797</a>)</li>
+<li><strong>emscripten 2.0.23</strong> — ❤️ <a href="https://github.com/jeromelaban">@jeromelaban</a> adds support for emscripten 2.0.23 on WebAssembly. (<a href="https://github.com/mono/SkiaSharp/pull/1746">#1746</a>)</li>
+<li><strong>Uno 4.0</strong> — ❤️ <a href="https://github.com/jeromelaban">@jeromelaban</a> bumps the Uno Platform support to 4.0. (<a href="https://github.com/mono/SkiaSharp/pull/1873">#1873</a>)</li>
+<li><strong>Android packaging</strong> — ❤️ <a href="https://github.com/jonathanpeppers">@jonathanpeppers</a> stops shipping <code>.so</code> files in class libraries and trims <code>Resource.designer.cs</code> fields. (<a href="https://github.com/mono/SkiaSharp/pull/1895">#1895</a>, <a href="https://github.com/mono/SkiaSharp/pull/1812">#1812</a>)</li>
+<li><strong>Debug symbols</strong> — Adds the main PDB files to the packages. (<a href="https://github.com/mono/SkiaSharp/pull/1781">#1781</a>)</li>
+</ul>
+<h3 id="security">Security</h3>
+<ul>
+<li><strong>Software Bill of Materials</strong> — ❤️ <a href="https://github.com/mjbond-msft">@mjbond-msft</a> generates an SBOM manifest for the build. (<a href="https://github.com/mono/SkiaSharp/pull/1954">#1954</a>)</li>
+</ul>
+<h2 id="bug-fixes">Bug Fixes</h2>
+<ul>
+<li><strong><code>IgnorePixelScaling</code></strong> — Fixes the behavior of the <code>IgnorePixelScaling</code> property. (<a href="https://github.com/mono/SkiaSharp/pull/1804">#1804</a>)</li>
+<li><strong>Blazor <code>SKCanvasView</code> loop</strong> — ❤️ <a href="https://github.com/JensKrumsieck">@JensKrumsieck</a> prevents an infinite loop in the Blazor <code>SKCanvasView</code>. (<a href="https://github.com/mono/SkiaSharp/pull/1889">#1889</a>)</li>
+<li><strong>MAUI <code>SKCanvasView</code> NRE</strong> — ❤️ <a href="https://github.com/jsuarezruiz">@jsuarezruiz</a> guards against a <code>NullReferenceException</code> in the .NET MAUI <code>SKCanvasView</code>. (<a href="https://github.com/mono/SkiaSharp/pull/1734">#1734</a>)</li>
+<li><strong>Linux <code>libdl</code> resolution</strong> — ❤️ <a href="https://github.com/akoeplinger">@akoeplinger</a> tries <code>libdl.so.2</code> before <code>libdl.so</code>. (<a href="https://github.com/mono/SkiaSharp/pull/2010">#2010</a>)</li>
+<li><strong>Windows handle locking</strong> — Replaces the <code>HandleDictionary</code> lock with a critical section on Windows. (<a href="https://github.com/mono/SkiaSharp/pull/1817">#1817</a>)</li>
+<li><strong>Blittable enums</strong> — Works around enums not being blittable. (<a href="https://github.com/mono/SkiaSharp/pull/1857">#1857</a>)</li>
+<li><strong>Native statics</strong> — Never disposes the native static objects. (<a href="https://github.com/mono/SkiaSharp/pull/1863">#1863</a>)</li>
+<li><strong>Mac Catalyst build</strong> — Fixes the Mac Catalyst build task Inputs/Outputs. (<a href="https://github.com/mono/SkiaSharp/pull/1865">#1865</a>)</li>
+</ul>
+<h2 id="platform-support">Platform Support</h2>
+<table>
+<thead>
+<tr>
+<th>Platform</th>
+<th>What's New</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>🍎 Apple</td>
+<td>Mac Catalyst support</td>
+</tr>
+<tr>
+<td>🪟 Windows</td>
+<td>WindowsAppSDK, native symbols, critical-section handle locking</td>
+</tr>
+<tr>
+<td>🐧 Linux</td>
+<td><code>libdl.so.2</code> resolution</td>
+</tr>
+<tr>
+<td>🤖 Android</td>
+<td><code>.so</code> files excluded from class libraries, trimmed resources</td>
+</tr>
+<tr>
+<td>🌐 WebAssembly</td>
+<td>Blazor WASM components, emscripten 2.0.23, Uno 4.0</td>
+</tr>
+<tr>
+<td>🎨 Core API</td>
+<td>.NET MAUI views, new drawing APIs, HarfBuzz 2.8.2</td>
+</tr>
+<tr>
+<td>📦 General</td>
+<td>.NET 6 targets, Native Asset packages, PDB symbols, SBOM</td>
+</tr>
+</tbody>
+</table>
+<h2 id="community-contributors-">Community Contributors ❤️</h2>
+<table>
+<thead>
+<tr>
+<th>Contributor</th>
+<th>What They Did</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/jeromelaban">@jeromelaban</a></td>
+<td>Added emscripten 2.0.23 support and bumped Uno to 4.0</td>
+</tr>
+<tr>
+<td><a href="https://github.com/jonathanpeppers">@jonathanpeppers</a></td>
+<td>Improved Android packaging and trimmed generated resource fields</td>
+</tr>
+<tr>
+<td><a href="https://github.com/JensKrumsieck">@JensKrumsieck</a></td>
+<td>Fixed an infinite loop in the Blazor <code>SKCanvasView</code></td>
+</tr>
+<tr>
+<td><a href="https://github.com/jsuarezruiz">@jsuarezruiz</a></td>
+<td>Guarded against an NRE in the MAUI <code>SKCanvasView</code></td>
+</tr>
+<tr>
+<td><a href="https://github.com/akoeplinger">@akoeplinger</a></td>
+<td>Improved <code>libdl</code> resolution on Linux</td>
+</tr>
+<tr>
+<td><a href="https://github.com/mjbond-msft">@mjbond-msft</a></td>
+<td>Added SBOM manifest generation</td>
+</tr>
+</tbody>
+</table>
+<h2 id="links">Links</h2>
+<ul>
+<li><a href="https://github.com/mono/SkiaSharp/compare/v2.80.4...v2.88.0">Full Changelog</a></li>
+<li><a href="https://www.nuget.org/packages/SkiaSharp/2.88.0">NuGet Package</a></li>
+<li><a href="https://github.com/mono/SkiaSharp/tree/main/changelogs/SkiaSharp/2.88.0">API Diff</a></li>
+</ul>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/mono/SkiaSharp/blob/4179/merge/documentation/docfx/releases/2.88.0.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          PR #4179 · mattleibow/api-diff-stable-rollup · 577b69d
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

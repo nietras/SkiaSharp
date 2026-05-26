@@ -1,0 +1,242 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Version 3.119.1 | SkiaSharp </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Version 3.119.1 | SkiaSharp ">
+      
+      
+      <link rel="icon" href="../images/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../TOC.html">
+      <meta name="docfx:tocrel" content="TOC.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/mono/SkiaSharp/blob/4179/merge/documentation/docfx/releases/3.119.1.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="version-31191">Version 3.119.1</h1>
+<!--
+  RAW PR DATA — Do not remove this comment block.
+  AI uses this data to generate the polished release notes below.
+  Re-run the script to refresh this data from git history.
+
+  Generated: 2026-06-16T19:45:08Z by generate-release-notes.py
+  version:   3.119.1
+  status:    stable
+  branch:    release/3.119.1
+  diff:      release/3.119.0..release/3.119.1
+  prs:       25
+
+  - Update the pipeline version to v3.119.1 by @mattleibow in https://github.com/mono/SkiaSharp/pull/3355 (1 commit, 1 day)
+  - Improve the API Scan yaml in the template by @mattleibow in https://github.com/mono/SkiaSharp/pull/3353 (5 commits, 2 days)
+  - Fix 1ES Templates by @mattleibow in https://github.com/mono/SkiaSharp/pull/3352 (1 commit, 1 day)
+  - Update to 1ES MicroBuild templates by @mattleibow in https://github.com/mono/SkiaSharp/pull/3347 (26 commits, 5 days)
+  - Regenerate the docs and bump the version by @mattleibow in https://github.com/mono/SkiaSharp/pull/3345 (2 commits, 1 day)
+  - Build the WinUI Interop as /MT by @mattleibow in https://github.com/mono/SkiaSharp/pull/3341 (2 commits, 1 day)
+  - Added PostScriptName to SkTypeface by @jonlipsky in https://github.com/mono/SkiaSharp/pull/3263 [community ✨] (4 commits, 3 days)
+  - Build EGL as win32 and GLESv2 as WASDK by @mattleibow in https://github.com/mono/SkiaSharp/pull/3338 (1 commit, 1 day)
+  - Test disposing GRContext does not crash for Metal backend by @jeremy-visionaid in https://github.com/mono/SkiaSharp/pull/3258 [community ✨] (2 commits, 2 days)
+  - Update azure-pipelines-native.yml by @mattleibow in https://github.com/mono/SkiaSharp/pull/3340 (1 commit, 1 day)
+  - Update zlib to v1.3.0.1+ by @mattleibow in https://github.com/mono/SkiaSharp/pull/3058 (17 commits, 5 days)
+  - Update label-with-ai.yml by @mattleibow in https://github.com/mono/SkiaSharp/pull/3339 (1 commit, 1 day)
+  - Fix UTC DateTime conversion by @jeremy-visionaid in https://github.com/mono/SkiaSharp/pull/3333 [community ✨] (1 commit, 1 day)
+  - Hotfix metal for ios 15 and lower by @taublast in https://github.com/mono/SkiaSharp/pull/3293 [community ✨] (3 commits, 3 days)
+  - Update label-with-ai.yml by @mattleibow in https://github.com/mono/SkiaSharp/pull/3306 (5 commits, 2 days)
+  - Use the new Triage assistant by @mattleibow in https://github.com/mono/SkiaSharp/pull/3305 (1 commit, 1 day)
+  - fix: SKXamlCanvas must not be opaque on MacCatalyst by @spouliot in https://github.com/mono/SkiaSharp/pull/3236 [community ✨] (2 commits, 2 days)
+  - SKAutoCanvasRestore avoid crash at Dispose when canvas was already disposed by @taublast in https://github.com/mono/SkiaSharp/pull/3291 [community ✨] (5 commits, 4 days)
+  - Update Azure Pipelines from ubuntu-20.04 to ubuntu-22.04 by @Copilot in https://github.com/mono/SkiaSharp/pull/3295 [community ✨] (2 commits, 1 day)
+  - Avoid initializing SKMetalView twice by @jeremy-visionaid in https://github.com/mono/SkiaSharp/pull/3256 [community ✨] (1 commit, 1 day)
+  - Update README.md by @mattleibow in https://github.com/mono/SkiaSharp/pull/3254 (1 commit, 1 day)
+  - Increase the build number in the new pipeline by @mattleibow in https://github.com/mono/SkiaSharp/pull/3253 (1 commit, 1 day)
+  - Add a cron job to make sure all is well by @mattleibow in https://github.com/mono/SkiaSharp/pull/3249 (1 commit, 1 day)
+  - [azure-pipelines-native] Add CI triggers for primary branches by @pjcollins in https://github.com/mono/SkiaSharp/pull/3248 [community ✨] (3 commits, 1 day)
+  - Split the pipeline up on release builds by @mattleibow in https://github.com/mono/SkiaSharp/pull/3247 (26 commits, 3 days)
+-->
+<!-- Generated: 2026-06-16T18:39:14Z by claude-opus-4.8 -->
+
+<blockquote>
+<p><strong>Metal and Apple platform fixes</strong> · Released · <a href="https://www.nuget.org/packages/SkiaSharp/3.119.1">NuGet</a> · <a href="https://github.com/mono/SkiaSharp/releases/tag/v3.119.1">GitHub Release</a></p>
+</blockquote>
+<h2 id="highlights">Highlights</h2>
+<p>A servicing release focused on Apple platform stability — fixing Metal rendering on iOS 15 and lower, MacCatalyst canvas opacity, and disposal crashes — alongside a zlib update and a new <code>PostScriptName</code> on <code>SKTypeface</code>. Most user-facing fixes came from community contributors including <a href="https://github.com/taublast">@taublast</a>, <a href="https://github.com/jeremy-visionaid">@jeremy-visionaid</a>, <a href="https://github.com/jonlipsky">@jonlipsky</a>, and <a href="https://github.com/spouliot">@spouliot</a>.</p>
+<h2 id="new-features">New Features</h2>
+<h3 id="engine">Engine</h3>
+<ul>
+<li><strong>Updated zlib to v1.3.0.1+</strong> — Refreshes the bundled zlib native dependency. (<a href="https://github.com/mono/SkiaSharp/pull/3058">#3058</a>)</li>
+</ul>
+<h3 id="text--fonts">Text &amp; Fonts</h3>
+<ul>
+<li><strong><code>PostScriptName</code> on <code>SKTypeface</code></strong> — Exposes the PostScript name of a typeface. ❤️ <a href="https://github.com/jonlipsky">@jonlipsky</a> (<a href="https://github.com/mono/SkiaSharp/pull/3263">#3263</a>)</li>
+</ul>
+<h3 id="platform">Platform</h3>
+<ul>
+<li><strong>WinUI Interop built as <code>/MT</code></strong> — Builds the WinUI interop library with the static runtime. (<a href="https://github.com/mono/SkiaSharp/pull/3341">#3341</a>)</li>
+<li><strong>EGL/GLESv2 build targets</strong> — Builds EGL as win32 and GLESv2 as WASDK. (<a href="https://github.com/mono/SkiaSharp/pull/3338">#3338</a>)</li>
+</ul>
+<h2 id="bug-fixes">Bug Fixes</h2>
+<ul>
+<li><strong>Metal on iOS 15 and lower</strong> — Hotfixes Metal rendering for iOS 15 and earlier. ❤️ <a href="https://github.com/taublast">@taublast</a> (<a href="https://github.com/mono/SkiaSharp/pull/3293">#3293</a>)</li>
+<li><strong><code>SKAutoCanvasRestore</code> disposal crash</strong> — Avoids a crash at <code>Dispose</code> when the canvas was already disposed. ❤️ <a href="https://github.com/taublast">@taublast</a> (<a href="https://github.com/mono/SkiaSharp/pull/3291">#3291</a>)</li>
+<li><strong>MacCatalyst canvas opacity</strong> — Ensures <code>SKXamlCanvas</code> is not opaque on MacCatalyst. ❤️ <a href="https://github.com/spouliot">@spouliot</a> (<a href="https://github.com/mono/SkiaSharp/pull/3236">#3236</a>)</li>
+<li><strong>Double <code>SKMetalView</code> initialization</strong> — Avoids initializing <code>SKMetalView</code> twice. ❤️ <a href="https://github.com/jeremy-visionaid">@jeremy-visionaid</a> (<a href="https://github.com/mono/SkiaSharp/pull/3256">#3256</a>)</li>
+<li><strong>UTC <code>DateTime</code> conversion</strong> — Fixes UTC <code>DateTime</code> conversion. ❤️ <a href="https://github.com/jeremy-visionaid">@jeremy-visionaid</a> (<a href="https://github.com/mono/SkiaSharp/pull/3333">#3333</a>)</li>
+</ul>
+<h2 id="platform-support">Platform Support</h2>
+<table>
+<thead>
+<tr>
+<th>Platform</th>
+<th>What's New</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>🍎 Apple</td>
+<td>Metal iOS 15 hotfix, MacCatalyst <code>SKXamlCanvas</code> opacity, <code>SKMetalView</code> init fix, <code>SKAutoCanvasRestore</code> crash fix</td>
+</tr>
+<tr>
+<td>🪟 Windows</td>
+<td>WinUI interop <code>/MT</code> build, EGL/GLESv2 build targets</td>
+</tr>
+<tr>
+<td>🎨 Core API</td>
+<td><code>SKTypeface.PostScriptName</code>, UTC <code>DateTime</code> fix</td>
+</tr>
+</tbody>
+</table>
+<h2 id="community-contributors-">Community Contributors ❤️</h2>
+<table>
+<thead>
+<tr>
+<th>Contributor</th>
+<th>What They Did</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/taublast">@taublast</a></td>
+<td>Hotfixed Metal on iOS 15 and fixed an <code>SKAutoCanvasRestore</code> disposal crash</td>
+</tr>
+<tr>
+<td><a href="https://github.com/jeremy-visionaid">@jeremy-visionaid</a></td>
+<td>Fixed UTC <code>DateTime</code> conversion, double <code>SKMetalView</code> init, and added a Metal <code>GRContext</code> disposal test</td>
+</tr>
+<tr>
+<td><a href="https://github.com/jonlipsky">@jonlipsky</a></td>
+<td>Added <code>PostScriptName</code> to <code>SKTypeface</code></td>
+</tr>
+<tr>
+<td><a href="https://github.com/spouliot">@spouliot</a></td>
+<td>Fixed MacCatalyst <code>SKXamlCanvas</code> opacity</td>
+</tr>
+<tr>
+<td><a href="https://github.com/pjcollins">@pjcollins</a></td>
+<td>Added CI triggers for the native pipeline</td>
+</tr>
+</tbody>
+</table>
+<h2 id="links">Links</h2>
+<ul>
+<li><a href="https://github.com/mono/SkiaSharp/compare/v3.119.0...v3.119.1">Full Changelog</a></li>
+<li><a href="https://www.nuget.org/packages/SkiaSharp/3.119.1">NuGet Package</a></li>
+<li><a href="https://github.com/mono/SkiaSharp/tree/main/changelogs/SkiaSharp/3.119.1">API Diff</a></li>
+</ul>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/mono/SkiaSharp/blob/4179/merge/documentation/docfx/releases/3.119.1.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          PR #4179 · mattleibow/api-diff-stable-rollup · 577b69d
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
