@@ -56,30 +56,12 @@ public static SKImageInfo DecodeBounds (string filename);
 
 #### Type Changed: SkiaSharp.SKCanvas
 
-Removed methods:
-
-```csharp
-public void ClipPath (SKPath path);
-public void ClipRect (SKRect rect);
-public void Save ();
-public void SaveLayer (SKPaint paint);
-public void SaveLayer (SKRect limit, SKPaint paint);
-```
-
 Added methods:
 
 ```csharp
-public void ClipPath (SKPath path, SKRegionOperation operation, bool antialias);
-public void ClipRect (SKRect rect, SKRegionOperation operation, bool antialias);
 public void DrawCircle (float cx, float cy, float radius, SKPaint paint);
-public void DrawRoundRect (SKRect rect, float rx, float ry, SKPaint paint);
-public bool GetClipBounds (ref SKRect bounds);
-public bool GetClipDeviceBounds (ref SKRectI bounds);
 public void RotateDegrees (float degrees, float px, float py);
 public void RotateRadians (float radians, float px, float py);
-public int Save ();
-public int SaveLayer (SKPaint paint);
-public int SaveLayer (SKRect limit, SKPaint paint);
 public void Scale (float sx, float sy, float px, float py);
 ```
 
@@ -107,15 +89,6 @@ Index8 = 6,
 Rgb565 = 2,
 Rgba8888 = 4,
 RgbaF16 = 8,
-```
-
-
-#### Type Changed: SkiaSharp.SKFileStream
-
-Added method:
-
-```csharp
-protected override void Dispose (bool disposing);
 ```
 
 
@@ -187,83 +160,32 @@ public bool TryInvert (out SKMatrix inverse);
 ```
 
 
-#### Type Changed: SkiaSharp.SKMemoryStream
-
-Added method:
-
-```csharp
-protected override void Dispose (bool disposing);
-```
-
-
-#### Type Changed: SkiaSharp.SKObject
+#### Type Changed: SkiaSharp.SKPaint
 
 Added property:
 
 ```csharp
-protected bool OwnsHandle { get; }
-```
-
-
-#### Type Changed: SkiaSharp.SKPaint
-
-Added properties:
-
-```csharp
-public SKFilterQuality FilterQuality { get; set; }
-public SKFontMetrics FontMetrics { get; }
-public bool IsDither { get; set; }
-public bool IsVerticalText { get; set; }
 public SKPathEffect PathEffect { get; set; }
-```
-
-Added methods:
-
-```csharp
-public SKPath GetTextPath (string text, SKPoint[] points);
-public SKPath GetTextPath (IntPtr buffer, IntPtr length, SKPoint[] points);
-public SKPath GetTextPath (string text, float x, float y);
-public SKPath GetTextPath (IntPtr buffer, IntPtr length, float x, float y);
 ```
 
 
 #### Type Changed: SkiaSharp.SKPath
 
-Added constructor:
-
-```csharp
-public SKPath (SKPath path);
-```
-
-Added property:
-
-```csharp
-public SKPathFillType FillType { get; set; }
-```
-
 Added methods:
 
 ```csharp
-public void AddArc (SKRect oval, float startAngle, float sweepAngle);
 public void AddCircle (float x, float y, float radius, SKPathDirection dir);
 public void AddPath (SKPath other, SKPath.AddMode mode);
 public void AddPath (SKPath other, ref SKMatrix matrix, SKPath.AddMode mode);
 public void AddPath (SKPath other, float dx, float dy, SKPath.AddMode mode);
 public void AddPathReverse (SKPath other);
-public void AddRect (SKRect rect, SKPathDirection direction, uint startIndex);
 public void AddRoundedRect (SKRect rect, float rx, float ry, SKPathDirection dir);
 public void ArcTo (float rx, float ry, float xAxisRotate, SKPathArcSize largeArc, SKPathDirection sweep, float x, float y);
 public SKPath.Iterator CreateIterator (bool forceClose);
 public SKPath.RawIterator CreateRawIterator ();
 public void RArcTo (float rx, float ry, float xAxisRotate, SKPathArcSize largeArc, SKPathDirection sweep, float x, float y);
-public void RConicTo (float dx0, float dy0, float dx1, float dy1, float w);
-public void RCubicTo (float dx0, float dy0, float dx1, float dy1, float dx2, float dy2);
-public void RLineTo (float dx, float dy);
-public void RMoveTo (float dx, float dy);
-public void RQuadTo (float dx0, float dy0, float dx1, float dy1);
 public void Reset ();
 public void Rewind ();
-public void Transform (SKMatrix matrix);
 ```
 
 
@@ -282,37 +204,13 @@ public SKPictureRecorder (IntPtr handle, bool owns);
 ```
 
 
-#### Type Changed: SkiaSharp.SKSurfaceProps
-
-Added field:
-
-```csharp
-public SKPixelGeometry PixelGeometry;
-```
-
-Removed property:
-
-```csharp
-public SKPixelGeometry PixelGeometry { get; set; }
-```
-
-
 #### Type Changed: SkiaSharp.SKTypeface
-
-Added property:
-
-```csharp
-public string FamilyName { get; }
-```
 
 Added methods:
 
 ```csharp
 public static SKTypeface FromFamilyName (string familyName, SKFontStyleWeight weight, SKFontStyleWidth width, SKFontStyleSlant slant);
 public static SKTypeface FromFamilyName (string familyName, int weight, int width, SKFontStyleSlant slant);
-public byte[] GetTableData (uint tag);
-public uint[] GetTableTags ();
-public bool TryGetTableData (uint tag, out byte[] tableData);
 ```
 
 
@@ -386,37 +284,6 @@ public enum SKCodecResult {
 }
 ```
 
-#### New Type: SkiaSharp.SKDocument
-
-```csharp
-public class SKDocument : SkiaSharp.SKObject, System.IDisposable {
-	// fields
-	public static const float DefaultRasterDpi;
-	// methods
-	public void Abort ();
-	public SKCanvas BeginPage (float width, float height);
-	public SKCanvas BeginPage (float width, float height, SKRect content);
-	public bool Close ();
-	public static SKDocument CreatePdf (SKWStream stream, float dpi);
-	public static SKDocument CreatePdf (string path, float dpi);
-	protected override void Dispose (bool disposing);
-	public void EndPage ();
-}
-```
-
-#### New Type: SkiaSharp.SKDynamicMemoryWStream
-
-```csharp
-public class SKDynamicMemoryWStream : SkiaSharp.SKWStream, System.IDisposable {
-	// constructors
-	public SKDynamicMemoryWStream ();
-	// methods
-	public SKData CopyToData ();
-	public SKStreamAsset DetachAsStream ();
-	protected override void Dispose (bool disposing);
-}
-```
-
 #### New Type: SkiaSharp.SKEncodedFormat
 
 ```csharp
@@ -434,38 +301,6 @@ public enum SKEncodedFormat {
 	Unknown = 0,
 	Wbmp = 6,
 	Webp = 7,
-}
-```
-
-#### New Type: SkiaSharp.SKFileWStream
-
-```csharp
-public class SKFileWStream : SkiaSharp.SKWStream, System.IDisposable {
-	// constructors
-	public SKFileWStream (string path);
-	// methods
-	protected override void Dispose (bool disposing);
-}
-```
-
-#### New Type: SkiaSharp.SKFontMetrics
-
-```csharp
-public struct SKFontMetrics {
-	// properties
-	public float Ascent { get; }
-	public float AverageCharacterWidth { get; }
-	public float Bottom { get; }
-	public float CapHeight { get; }
-	public float Descent { get; }
-	public float Leading { get; }
-	public float MaxCharacterWidth { get; }
-	public float Top { get; }
-	public float? UnderlinePosition { get; }
-	public float? UnderlineThickness { get; }
-	public float XHeight { get; }
-	public float XMax { get; }
-	public float XMin { get; }
 }
 ```
 
@@ -538,58 +373,6 @@ public class SKPathEffect : SkiaSharp.SKObject, System.IDisposable {
 	public static SKPathEffect CreateDiscrete (float segLength, float deviation, uint seedAssist);
 	public static SKPathEffect CreateSum (SKPathEffect first, SKPathEffect second);
 	protected override void Dispose (bool disposing);
-}
-```
-
-#### New Type: SkiaSharp.SKPathFillType
-
-```csharp
-[Serializable]
-public enum SKPathFillType {
-	EvenOdd = 1,
-	InverseEvenOdd = 3,
-	InverseWinding = 2,
-	Winding = 0,
-}
-```
-
-#### New Type: SkiaSharp.SKRegionOperation
-
-```csharp
-[Serializable]
-public enum SKRegionOperation {
-	Difference = 0,
-	Intersect = 1,
-	Replace = 5,
-	ReverseDifference = 4,
-	Union = 2,
-	XOR = 3,
-}
-```
-
-#### New Type: SkiaSharp.SKWStream
-
-```csharp
-public abstract class SKWStream : SkiaSharp.SKObject, System.IDisposable {
-	// properties
-	public int BytesWritten { get; }
-	// methods
-	public void Flush ();
-	public static int GetSizeOfPackedUInt32 (uint value);
-	public void NewLine ();
-	public bool Write (byte[] buffer, int size);
-	public bool Write16 (ushort value);
-	public bool Write32 (uint value);
-	public bool Write8 (byte value);
-	public bool WriteBigDecimalAsText (long value, int digits);
-	public bool WriteBool (bool value);
-	public bool WriteDecimalAsTest (int value);
-	public bool WriteHexAsText (uint value, int digits);
-	public bool WritePackedUInt32 (uint value);
-	public bool WriteScalar (float value);
-	public bool WriteScalarAsText (float value);
-	public bool WriteStream (SKStream input, int length);
-	public bool WriteText (string value);
 }
 ```
 

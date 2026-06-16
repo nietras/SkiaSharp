@@ -2,15 +2,4 @@
 
 ## SkiaSharp.Views.iOS.dll
 
-### Namespace SkiaSharp.Views.iOS
-
-#### Type Changed: SkiaSharp.Views.iOS.SKCanvasView
-
-Added method:
-
-```csharp
-public override void WillMoveToWindow (UIKit.UIWindow window);
-```
-
-
-
+> No changes.

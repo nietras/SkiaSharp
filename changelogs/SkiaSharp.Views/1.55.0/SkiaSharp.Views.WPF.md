@@ -2,8 +2,13 @@
 
 ## SkiaSharp.Views.WPF.dll
 
-> Assembly Version Changed: 1.55.0.0 vs 0.0.0.0
+> Assembly Version Changed: 1.55.0.0 vs 1.54.0.0
 
+### Removed Namespace SkiaSharp.Views
+
+
+#### Removed Type SkiaSharp.Views.SKElement
+#### Removed Type SkiaSharp.Views.WPFExtensions
 ### New Namespace SkiaSharp.Views.WPF
 
 #### New Type: SkiaSharp.Views.WPF.SKElement

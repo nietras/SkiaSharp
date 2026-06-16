@@ -410,6 +410,29 @@ public SKPixelGeometry PixelGeometry { get; set; }
 ```
 
 
+#### Type Changed: SkiaSharp.SKWStream
+
+Modified properties:
+
+```diff
+-public virtual int BytesWritten { get; }
++public int BytesWritten { get; }
+```
+
+Modified methods:
+
+```diff
+-public virtual void Flush ()
++public void Flush ()
+-public virtual bool Write (byte[] buffer, int size)
++public bool Write (byte[] buffer, int size)
+```
+
+
+#### Removed Type SkiaSharp.SKManagedWStream
+#### Removed Type SkiaSharp.SKSvgCanvas
+#### Removed Type SkiaSharp.SKXmlStreamWriter
+#### Removed Type SkiaSharp.SKXmlWriter
 #### New Type: SkiaSharp.GRBackend
 
 ```csharp

@@ -89,4 +89,8 @@ public SKPixelGeometry PixelGeometry;
 ```
 
 
+#### Removed Type SkiaSharp.SKManagedWStream
+#### Removed Type SkiaSharp.SKSvgCanvas
+#### Removed Type SkiaSharp.SKXmlStreamWriter
+#### Removed Type SkiaSharp.SKXmlWriter
 

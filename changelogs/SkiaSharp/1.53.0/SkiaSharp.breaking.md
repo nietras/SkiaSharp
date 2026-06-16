@@ -34,19 +34,6 @@ public static SKImageInfo DecodeBounds (string filename, SKColorType pref);
 ```
 
 
-#### Type Changed: SkiaSharp.SKCanvas
-
-Removed methods:
-
-```csharp
-public void ClipPath (SKPath path);
-public void ClipRect (SKRect rect);
-public void Save ();
-public void SaveLayer (SKPaint paint);
-public void SaveLayer (SKRect limit, SKPaint paint);
-```
-
-
 #### Type Changed: SkiaSharp.SKColorType
 
 Removed values:
@@ -75,15 +62,6 @@ Removed constructor:
 
 ```csharp
 public SKPictureRecorder (IntPtr handle);
-```
-
-
-#### Type Changed: SkiaSharp.SKSurfaceProps
-
-Removed property:
-
-```csharp
-public SKPixelGeometry PixelGeometry { get; set; }
 ```
 
 
